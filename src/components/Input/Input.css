@@ -1,0 +1,29 @@
+.rixun-input-group {
+  position: relative;
+}
+
+.rixun-input {
+  display: inline-block;
+  padding: 10px;
+}
+
+.rixun-input:focus {
+  background-color:#FFF;
+}
+
+.rixun-input-label {
+  color: #999;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 10px;
+  transition: 0.2s;
+}
+
+.rixun-input:focus ~ .rixun-input-label,
+.rixun-input:valid ~ .rixun-input-label {
+  top: -8px;
+  font-size: small;
+  background-color:#FFF;
+  padding: 0 5px;
+}
