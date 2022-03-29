@@ -1,0 +1,33 @@
+.red-default {
+  background-color: darkred;
+  color: white;
+}
+.red-default:hover {
+  background-color: rgb(120, 0, 0);
+}
+.red-default:active {
+  background-color: rgb(100, 0, 0);
+}
+.red-link {
+  color: darkred;
+}
+.red-link:hover {
+  color: rgb(120, 0, 0);
+}
+.red-link:active {
+  color: rgb(100, 0, 0);
+}
+.red-outline {
+  border-color: darkred;
+  color: darkred;
+}
+.red-outline:hover {
+  border-color: rgb(120, 0, 0);
+  background-color: rgb(120, 0, 0);
+  color: white;
+}
+.red-outline:active {
+  border-color: rgb(100, 0, 0);
+  background-color: rgb(100, 0, 0);
+  color: white;
+}
