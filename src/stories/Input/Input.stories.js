@@ -24,7 +24,7 @@ stories.add('App', () => {
   return(
     <>
       <Input
-        className='rixun-input-sm storybook-input'
+        className='rixun-input storybook-input'
         rixunRef={ref}
         id='rixun-input1'
         name='rixun-input'
