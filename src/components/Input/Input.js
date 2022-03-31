@@ -8,8 +8,13 @@ export const Input = (props) => {
     id,
     name,
     type,
+    onClick,
+    onFocus,
+    onChange,
+    onBlur,
+    onPaste,
     placeholder,
-    placeholderStyling,
+    placeholderClassName,
     extraProps
   } = props;
 
@@ -21,10 +26,15 @@ export const Input = (props) => {
         id={id}
         name={name}
         type={type}
+        onClick={onClick}
+        onFocus={onFocus}
+        onChange={onChange}
+        onBlur={onBlur}
+        onPaste={onPaste}
         required
         {...extraProps}
       />
-      <label htmlFor={id} className={`rixun-input-label ${placeholderStyling}`}>{placeholder}</label>
+      <label htmlFor={id} className={`rixun-input-label ${placeholderClassName}`}>{placeholder}</label>
     </div>
   )
 }
@@ -45,6 +55,6 @@ Input.propTypes = {
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onPaste: PropTypes.func,
-  placeholderStyling: PropTypes.string,
+  placeholderClassName: PropTypes.string,
   extraProps: PropTypes.object,
 }
