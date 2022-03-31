@@ -1,0 +1,75 @@
+.rixun-button-default,
+.rixun-button-link,
+.rixun-button-outline {
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  padding: 0.9em 2em;
+  transition: 0.2s ease-in-out;
+}
+.rixun-button-default:disabled,
+.rixun-button-link:disabled,
+.rixun-button-outline:disabled {
+  cursor: default;
+}
+
+.rixun-button-default {
+  background-color: var(--primary);
+  color: var(--text);
+}
+.rixun-button-default:hover {
+  background-color: var(--primary-hover);
+}
+.rixun-button-default:active {
+  background-color: var(--primary-active);
+}
+.rixun-button-default:disabled {
+  background-color: var(--disabled-background);
+  color: var(--disabled-text);
+}
+
+.rixun-button-link {
+  background: none;
+  text-decoration: underline;
+  color: var(--primary);
+}
+.rixun-button-link:hover {
+  color: var(--primary-hover);
+}
+.rixun-button-link:active {
+  color: var(--primary-active);
+}
+.rixun-button-link:disabled {
+  color: var(--disabled-text);
+}
+
+.rixun-button-outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+.rixun-button-outline:hover {
+  border-color: var(--primary-hover);
+  background-color: var(--primary-hover);
+  color: var(--text);
+}
+.rixun-button-outline:active {
+  border-color: var(--primary-active);
+  background-color: var(--primary-active);
+  color: var(--text);
+}
+.rixun-button-outline:disabled {
+  border-color: var(--disabled-background);
+  background: transparent;
+  color: var(--disabled-text);
+}
+
+.rixun-round {
+  border-radius: 0.3em;
+}
+.rixun-square {
+  border-radius: none;
+}
+.rixun-circle {
+  border-radius: 1000em;
+}

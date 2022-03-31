@@ -1,0 +1,23 @@
+:root {
+  --highlight900: #034668;
+  --highlight850: #00547f;
+  --highlight800: #00679b;
+  --highlight700: #0076b2;
+  --highlight600: #0098e5;
+  --highlight500: #009eed;
+  --highlight400: #39b9f9;
+  --highlight300: #5ec9ff;
+  --highlight200: #86d3f9;
+  --highlight100: #b2e5ff;
+  --highlight50: #e5f4fc;
+
+  --disabled-background: #ccc;
+  --disabled-text: #757575;
+
+  --primary: var(--highlight600);
+  --primary-hover: var(--highlight700);
+  --primary-focus: var(--highlight700);
+  --primary-active: var(--highlight800);
+  /* --secondary: var(--highlight900); */
+  --text: var(--highlight50);
+}
