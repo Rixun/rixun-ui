@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Button } from '../../components/Button';
 import './Button.css';
 
-const stories = storiesOf('Components', module);
+const stories = storiesOf('Button', module);
 
 stories.add('Button Types', () => {
   return (
