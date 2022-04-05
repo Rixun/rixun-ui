@@ -6,7 +6,7 @@ export const Button = (props) => {
   const {
     className,
     id,
-    ref,
+    buttonRef,
     name,
     onClick,
     corners,
@@ -21,7 +21,7 @@ export const Button = (props) => {
       <button
         className={`rixun-button-${type} rixun-${corners} ${className}`}
         id={id}
-        ref={ref}
+        ref={buttonRef}
         onClick={onClick}
         style={style}
         disabled={disabled}
@@ -45,7 +45,7 @@ Button.propTypes = {
   id: PropTypes.string,
   onClick: PropTypes.func,
   name: PropTypes.string,
-  ref: PropTypes.string,
+  buttonRef: PropTypes.object,
   style: PropTypes.object,
   type: PropTypes.oneOf(['default', 'link', 'outline']),
   extraProps: PropTypes.object,

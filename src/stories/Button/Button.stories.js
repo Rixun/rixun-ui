@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { Button } from '../../components/Button';
 import './Button.css';
 
-const stories = storiesOf('Components', module);
+const stories = storiesOf('Button', module);
 
 stories.add('Button Types', () => {
   return (
@@ -108,4 +108,16 @@ stories.add('Map of Buttons', () => {
       <span style={{ margin: '5px' }} />
     </>
   ));
+});
+stories.add('Ref Button', () => {
+  const buttonRef = useRef();
+  let n = 0;
+  const onClick = () => {
+    buttonRef.current.innerText = ++n;
+  };
+  return (
+    <>
+      <Button name={`ref`} buttonRef={buttonRef} onClick={onClick} />
+    </>
+  );
 });
