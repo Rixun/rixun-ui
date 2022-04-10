@@ -1,0 +1,68 @@
+.rixun-modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-x: hidden;
+}
+/* .rixun-modal-true {
+} */
+.rixun-modal-false {
+  width: 0;
+  height: 0;
+}
+.rixun-modal-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+.rixun-modal-true .rixun-modal-background {
+  opacity: 0.5;
+}
+.rixun-modal-false .rixun-modal-background {
+  opacity: 0;
+}
+
+.rixun-modal-opaque {
+  z-index: 1;
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  margin: 5px;
+}
+
+.rixun-modal-transparent {
+  z-index: 1;
+  width: 500px;
+  height: 300px;
+  background-color: transparent;
+  margin: 5px;
+}
+.rixun-modal-none {
+  width: 0;
+  height: 0;
+}
+
+.rixun-modal-round {
+  border-radius: 0.3em;
+}
+.rixun-modal-square {
+  border-radius: none;
+}
+.rixun-modal-circle {
+  border-radius: 1000em;
+}
