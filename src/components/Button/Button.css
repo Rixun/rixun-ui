@@ -64,12 +64,12 @@
   color: var(--disabled-text);
 }
 
-.rixun-round {
+.rixun-button-round {
   border-radius: 0.3em;
 }
-.rixun-square {
+.rixun-button-square {
   border-radius: none;
 }
-.rixun-circle {
+.rixun-button-circle {
   border-radius: 1000em;
 }

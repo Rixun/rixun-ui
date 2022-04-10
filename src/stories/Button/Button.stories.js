@@ -103,10 +103,7 @@ stories.add('State change Button', () => {
 stories.add('Map of Buttons', () => {
   const test = [1, 2, 3];
   return test.map((n) => (
-    <>
-      <Button name={`${n}`} key={n} />
-      <span style={{ margin: '5px' }} />
-    </>
+    <Button name={`${n}`} key={n} style={{ marginRight: '5px' }} />
   ));
 });
 stories.add('Ref Button', () => {
