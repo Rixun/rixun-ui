@@ -5,39 +5,94 @@ import './Dropdown.css';
 
 const stories = storiesOf('Dropdown', module);
 
-stories.add('Basic Events', () => {
+const dropdownOptions = (
+  <>
+    <option value='option1'>Option 1</option>
+    <option value='option2'>Option 2</option>
+    <option value='option3'>Option 3</option>
+  </>
+)
+
+const testDropdownOptions = [
+  'testing1', 'testing2', 'testing3'
+]
+
+stories.add('Base Examples', () => {
   const ref = createRef();
 
   return (
     <>
       <Dropdown
-        className='dropdown-test1'
-        rixunRef={ref}
-        id='rixun-dropdown1'
         name='rixun-dropdown1'
-        placeholder='Select option'
+        placeholder='Square corners'
+        corners='square'
       >
-        <option value='option1'>Option 1</option>
-        <option value='option2'>Option 2</option>
-        <option value='option3'>Option 3</option>
-        <option value='option4'>Option 4</option>
-        <option value='option5'>Option 5</option>
+        { dropdownOptions }
       </Dropdown>
 
       <br /><br />
 
       <Dropdown
-        className='dropdown-test1'
+        name='rixun-dropdown2'
+        placeholder='Round corners'
+        corners='round'
+      >
+        { dropdownOptions }
+      </Dropdown>
+
+      <br /><br />
+
+      <Dropdown
+        name='rixun-dropdown3'
+        placeholder='Circle corners'
+        corners='circle'
+      >
+        { dropdownOptions }
+      </Dropdown>
+    </>
+  )
+})
+
+stories.add('Hoverable dropdown', () => {
+  const ref = createRef();
+
+  return (
+    <>
+      <Dropdown
+        rixunRef={ref}
+        id='rixun-dropdown1'
+        name='rixun-dropdown1'
+        placeholder='Select option'
+        corners='square'
+        hover={true}
+      >
+        { testDropdownOptions }
+      </Dropdown>
+    
+      <br /><br />
+
+      <Dropdown
         rixunRef={ref}
         id='rixun-dropdown2'
         name='rixun-dropdown2'
-        placeholder='Car Manufacture'
+        placeholder='Select option'
+        corners='round'
+        hover={true}
       >
-        <option value='option1'>Honda</option>
-        <option value='option2'>Mazda</option>
-        <option value='option3'>Nissan</option>
-        <option value='option4'>Toyota</option>
-        <option value='option5'>Suzuki</option>
+        { testDropdownOptions }
+      </Dropdown>
+
+      <br /><br />
+
+      <Dropdown
+        rixunRef={ref}
+        id='rixun-dropdown3'
+        name='rixun-dropdown3'
+        placeholder='Select option'
+        corners='circle'
+        hover={true}
+      >
+        { testDropdownOptions }
       </Dropdown>
     </>
   )

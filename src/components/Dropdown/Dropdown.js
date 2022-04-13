@@ -10,23 +10,37 @@ export const Dropdown = (props) => {
     name,
     value,
     placeholder,
+    corners,
     onChange,
+    hover,
     extraProps
   } = props;
 
   return (
     <>
-      <select
-        className={`rixun-dropdown ${className}`}
-        ref={rixunRef}
-        id={id}
-        name={name}
-        value={value}
-        onChange={onChange}
-      >
-        {placeholder && <option value=''>{placeholder}</option>}
-        {children}
-      </select>
+      {!hover ? (
+        <select
+          className={`rixun-dropdown rixun-dropdown-${corners} ${className}`}
+          ref={rixunRef}
+          id={id}
+          name={name}
+          value={value}
+          onChange={onChange}
+          {...extraProps}
+        >
+          { placeholder && <option value='' hidden={true}>{placeholder}</option> }
+          { children }
+        </select>
+      ) : (
+        <div className='rixun-dropdown-button'>
+          <button className={`rixun-dropbutton rixun-dropdown-${corners} ${className}`}>{placeholder}</button>
+          <div className={`rixun-dropdown-content rixun-dropdown-content-${corners}`}>
+            {children.map((child) => {
+              return <a href='#' key={child}>{child}</a>
+            })}
+          </div>
+        </div>
+      )}
     </>
   )
 }
@@ -36,7 +50,7 @@ Dropdown.defaultProps = {
   placeholder: 'Select'
 }
 
-Dropdown.PropTypes = {
+Dropdown.propTypes = {
   children: PropTypes.object,
   className: PropTypes.string,  
   rixunRef: PropTypes.object,

@@ -10,14 +10,21 @@
   --highlight200: #86d3f9;
   --highlight100: #b2e5ff;
   --highlight50: #e5f4fc;
+  --highlight25: #eaeaea;
 
   --disabled-background: #ccc;
   --disabled-text: #757575;
+  --hover-dropdown-option: #bebebe;
 
   --primary: var(--highlight600);
   --primary-hover: var(--highlight700);
   --primary-focus: var(--highlight700);
   --primary-active: var(--highlight800);
+
   /* --secondary: var(--highlight900); */
+  --secondary-hover: var(--hover-dropdown-option);
+
   --text: var(--highlight50);
+  --text-white: #fff;
+  --text-black: #000;
 }
