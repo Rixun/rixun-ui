@@ -19,7 +19,7 @@ export const Button = (props) => {
   return (
     <>
       <button
-        className={`rixun-button-${type} rixun-${corners} ${className}`}
+        className={`rixun-button-${type} rixun-button-${corners} ${className}`}
         id={id}
         ref={buttonRef}
         onClick={onClick}
@@ -35,6 +35,7 @@ export const Button = (props) => {
 
 Button.defaultProps = {
   corners: 'round',
+  className: '',
   type: 'default',
 };
 
