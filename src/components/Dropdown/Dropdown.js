@@ -18,29 +18,30 @@ export const Dropdown = (props) => {
 
   return (
     <>
-      {!hover ? (
-        <select
-          className={`rixun-dropdown rixun-dropdown-${corners} ${className}`}
-          ref={rixunRef}
-          id={id}
-          name={name}
-          value={value}
-          onChange={onChange}
-          {...extraProps}
-        >
-          { placeholder && <option value='' hidden={true}>{placeholder}</option> }
-          { children }
-        </select>
-      ) : (
-        <div className='rixun-dropdown-button'>
-          <button className={`rixun-dropbutton rixun-dropdown-${corners} ${className}`}>{placeholder}</button>
-          <div className={`rixun-dropdown-content rixun-dropdown-content-${corners}`}>
-            {children.map((child) => {
-              return <a href='#' key={child}>{child}</a>
-            })}
+      {hover ? (
+          <div className='rixun-dropdown-button'>
+            <button className={`rixun-dropbutton rixun-dropdown-${corners} ${className}`}>{placeholder}</button>
+            <div className={`rixun-dropdown-content rixun-dropdown-content-${corners}`}>
+              {children.map((child) => {
+                return <a href='#' key={child}>{child}</a>
+              })}
+            </div>
           </div>
-        </div>
-      )}
+        ) : (
+          <select
+            className={`rixun-dropdown rixun-dropdown-${corners} ${className}`}
+            ref={rixunRef}
+            id={id}
+            name={name}
+            value={value}
+            onChange={onChange}
+            {...extraProps}
+          >
+            { placeholder && <option value='' hidden={true}>{placeholder}</option> }
+            { children }
+          </select> 
+        )
+      }
     </>
   )
 }
@@ -51,7 +52,7 @@ Dropdown.defaultProps = {
 }
 
 Dropdown.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   className: PropTypes.string,  
   rixunRef: PropTypes.object,
   id: PropTypes.string,

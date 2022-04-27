@@ -39,16 +39,6 @@ stories.add('Base Examples', () => {
       >
         { dropdownOptions }
       </Dropdown>
-
-      <br /><br />
-
-      <Dropdown
-        name='rixun-dropdown3'
-        placeholder='Circle corners'
-        corners='circle'
-      >
-        { dropdownOptions }
-      </Dropdown>
     </>
   )
 })
@@ -77,19 +67,6 @@ stories.add('Hoverable dropdown', () => {
         name='rixun-dropdown2'
         placeholder='Select option'
         corners='round'
-        hover={true}
-      >
-        { testDropdownOptions }
-      </Dropdown>
-
-      <br /><br />
-
-      <Dropdown
-        rixunRef={ref}
-        id='rixun-dropdown3'
-        name='rixun-dropdown3'
-        placeholder='Select option'
-        corners='circle'
         hover={true}
       >
         { testDropdownOptions }

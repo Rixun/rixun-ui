@@ -9,18 +9,12 @@
 .rixun-dropdown-square {
   border-radius: none;
 }
-.rixun-dropdown-circle {
-  border-radius: 1000em;
-}
 
 .rixun-dropdown-content-round{
   border-radius: 0.3em;
 }
 .rixun-dropdown-content-square{
   border-radius: none;
-}
-.rixun-dropdown-content-circle{
-  border-radius: 2em;
 }
 
 .rixun-dropdown-button {
