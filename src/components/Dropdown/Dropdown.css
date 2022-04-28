@@ -1,0 +1,61 @@
+.rixun-dropdown {
+  height: 2rem;
+  width: 10rem;
+}
+
+.rixun-dropdown-round {
+  border-radius: 0.3em;
+}
+.rixun-dropdown-square {
+  border-radius: none;
+}
+
+.rixun-dropdown-content-round{
+  border-radius: 0.3em;
+}
+.rixun-dropdown-content-square{
+  border-radius: none;
+}
+
+.rixun-dropdown-button {
+  position: relative;
+  display: inline-block;
+  /* width: 200px; */
+  width: 10rem;
+}
+
+.rixun-dropbutton {
+  background-color: var(--primary);
+  color: var(--text-white);
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  width: inherit;
+}
+
+.rixun-dropdown-content {
+  background-color: var(--highlight25);
+  position: absolute;
+  display: none;
+  z-index: 1;
+  width: inherit;
+}
+
+.rixun-dropdown-content a {
+  color: var(--text-black);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.rixun-dropdown-content a:hover {
+  background-color: var(--secondary-hover);
+}
+
+.rixun-dropdown-button:hover .rixun-dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .rixun-dropbutton {
+  background-color: var(--primary-hover);
+}
