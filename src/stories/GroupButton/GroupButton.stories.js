@@ -9,9 +9,10 @@ stories.add('Base Example', () => {
     
   return (
     <>
-      <GroupButton>
-        
-      </GroupButton>
+      <GroupButton
+        id='rixun-groupbutton'
+        name='test1'
+      />
     </>
   )
-});
+})

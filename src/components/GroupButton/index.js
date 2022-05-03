@@ -1,1 +1,1 @@
-export * from './GroupButton';
+export * from './GroupButton.js';

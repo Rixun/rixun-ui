@@ -16,21 +16,22 @@ export const GroupButton = (props) => {
 
   return (
     <div>
-      <input type='radio' id='test1' name='test' value='test1' />
-      <label for='test1'>test1</label><br/>
-      <input type='radio' id='test2' name='test' value='test2' />
-      <label for='test2'>test2</label><br/>
-      <input type='radio' id='test3' name='test' value='test3' />
-      <label for='test3'>test3</label>
+      <input
+        id={id}
+        name={name}
+        type='radio'
+        value='test1'
+      />
+      <label for='test1'>test1</label>
     </div>
   )
 }
 
-Dropdown.defaultProps = {
+GroupButton.defaultProps = {
   name: 'rixun-groupbutton'
 }
 
-Dropdown.propTypes = {
+GroupButton.propTypes = {
   children: PropTypes.object,
   className: PropTypes.string,  
   rixunRef: PropTypes.object,
