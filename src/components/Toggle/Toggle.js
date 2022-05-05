@@ -3,10 +3,29 @@ import './Toggle.css';
 import '../../theme/Theme.css';
 
 export const Toggle = (props) => {
-  const { active, className, disabled, id, onClick, type, style, extraProps } =
-    props;
+  const {
+    active,
+    className,
+    disabled,
+    id,
+    onClick,
+    type,
+    style,
+    extraProps,
+    containerClassName,
+    switchClassName,
+  } = props;
 
-  return <div></div>;
+  return (
+    <div className={`rixun-toggle-container ${containerClassName}`}>
+      <input type="checkbox" />
+      <div
+        className={`rixun-toggle-${type} rixun-toggle-${corners} ${className}`}
+      >
+        <span className={`rixun-toggle-switch ${switchClassName}`} />
+      </div>
+    </div>
+  );
 };
 
 Modal.defaultProps = {};
@@ -21,4 +40,6 @@ Modal.propTypes = {
   type: PropTypes.oneOf(['default', 'link', 'outline']),
   style: PropTypes.object,
   extraProps: PropTypes.object,
+  containerClassName: PropTypes.string,
+  switchClassName: PropTypes.string,
 };
