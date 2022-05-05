@@ -6,6 +6,7 @@ export const Toggle = (props) => {
   const {
     active,
     className,
+    corners,
     disabled,
     id,
     onClick,
@@ -28,9 +29,9 @@ export const Toggle = (props) => {
   );
 };
 
-Modal.defaultProps = {};
+Toggle.defaultProps = {};
 
-Modal.propTypes = {
+Toggle.propTypes = {
   active: PropTypes.bool,
   className: PropTypes.string,
   corners: PropTypes.oneOf(['square', 'round', 'circle']),
