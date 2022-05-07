@@ -18,18 +18,31 @@ export const Toggle = (props) => {
   } = props;
 
   return (
-    <div className={`rixun-toggle-container ${containerClassName}`}>
+    <div
+      className={`rixun-toggle-container ${containerClassName} ${
+        active ? 'rixun-toggle-active' : ''
+      }`}
+      onClick={onClick}
+    >
       <input type="checkbox" />
       <div
-        className={`rixun-toggle-${type} rixun-toggle-${corners} ${className}`}
+        className={`rixun-toggle rixun-toggle-${type} rixun-toggle-${corners} ${className}`}
       >
-        <span className={`rixun-toggle-switch ${switchClassName}`} />
+        <span
+          className={`rixun-toggle-switch rixun-toggle-${corners} ${switchClassName}`}
+        />
       </div>
     </div>
   );
 };
 
-Toggle.defaultProps = {};
+Toggle.defaultProps = {
+  type: 'border',
+  corners: 'circle',
+  className: '',
+  containerClassName: '',
+  switchClassName: '',
+};
 
 Toggle.propTypes = {
   active: PropTypes.bool,
@@ -38,8 +51,9 @@ Toggle.propTypes = {
   disabled: PropTypes.bool,
   id: PropTypes.string,
   onClick: PropTypes.func,
-  type: PropTypes.oneOf(['default', 'link', 'outline']),
+  type: PropTypes.oneOf(['border', 'no-border']),
   style: PropTypes.object,
+  // size: PropTypes.oneOf([])
   extraProps: PropTypes.object,
   containerClassName: PropTypes.string,
   switchClassName: PropTypes.string,
