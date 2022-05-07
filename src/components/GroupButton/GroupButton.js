@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const GroupButton = (props) => {
   const {
     className,
-    // rixunRef,
+    groupButtonRef,
     id,
     name,
     value,
@@ -14,8 +14,10 @@ export const GroupButton = (props) => {
   } = props;
 
   return (
-    <div className={`rixun-groupbutton ${className}`}>
+    <>
       <input
+        className={className}
+        ref={groupButtonRef}
         type='radio'
         id={id}
         name={name}
@@ -25,7 +27,7 @@ export const GroupButton = (props) => {
       />
       <label htmlFor={name}>{placeholder}</label>
       <br />
-    </div>
+    </>
   )
 }
 
@@ -34,12 +36,12 @@ GroupButton.defaultProps = {
 }
 
 GroupButton.propTypes = {
-  className: PropTypes.string,  
-  // rixunRef: PropTypes.object,
+  className: PropTypes.string,
+  groupButtonRef: PropTypes.object,
   id: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,
   onChangeTest: PropTypes.func,
-  extraProps: PropTypes.object  
+  extraProps: PropTypes.object
 }
