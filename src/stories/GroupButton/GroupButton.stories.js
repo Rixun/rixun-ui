@@ -6,7 +6,7 @@ import './GroupButton.css';
 
 const stories = storiesOf('GroupButton', module);
 
-stories.add('Base example', () => {
+stories.add('Base design', () => {
   const handleOnChangeBtn = (e) => { console.log(`GroupButton onChange event for: (${e.target.value})`); }
 
   const groupBtn = [
@@ -22,6 +22,32 @@ stories.add('Base example', () => {
           key={btn.id}
           id={btn.id}
           name='groupbtn'
+          value={btn.placeholder}
+          placeholder={btn.placeholder}
+          onChange={btn.onChange}
+        />
+      ))}
+    </div>
+  )
+});
+
+stories.add('Modern design', () => {
+  const handleOnChangeBtn = (e) => { console.log(`GroupButton onChange event for: (${e.target.value})`); }
+
+  const groupBtn = [
+    {id: 'option1', placeholder: 'Option 1', onChange: (e) => handleOnChangeBtn(e)},
+    {id: 'option2', placeholder: 'Option 2', onChange: (e) => handleOnChangeBtn(e)},
+    {id: 'option3', placeholder: 'Option 3', onChange: (e) => handleOnChangeBtn(e)}
+  ]
+  
+  return (
+    <div className='groupbutton-form'>
+      {groupBtn.map((btn) => (
+        <GroupButton
+          key={btn.id}
+          id={btn.id}
+          name='groupbtn'
+          modern={true}
           value={btn.placeholder}
           placeholder={btn.placeholder}
           onChange={btn.onChange}
@@ -53,6 +79,7 @@ stories.add('Display selection value', () => {
           key={btn.id}
           id={btn.id}
           name='language'
+          modern={true}
           value={btn.placeholder}
           placeholder={btn.placeholder}
           onChange={btn.onChange}
