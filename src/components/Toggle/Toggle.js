@@ -14,22 +14,32 @@ export const Toggle = (props) => {
     style,
     extraProps,
     containerClassName,
+    containerExtraProps,
+    checkboxExtraProps,
     switchClassName,
+    switchExtraProps,
   } = props;
 
   return (
     <div
-      className={`rixun-toggle-container ${containerClassName} ${
+      className={`rixun-toggle-container ${
         active ? 'rixun-toggle-active' : ''
-      }`}
-      onClick={onClick}
+      } ${containerClassName}`}
+      onClick={disabled ? null : onClick}
+      id={id ? id : null}
+      {...containerExtraProps}
     >
-      <input type="checkbox" />
+      <input type="checkbox" disabled={disabled} {...checkboxExtraProps} />
       <div
-        className={`rixun-toggle rixun-toggle-${type} rixun-toggle-${corners} ${className}`}
+        className={`rixun-toggle rixun-toggle-${type} rixun-toggle-${corners} ${
+          disabled ? 'rixun-toggle-disabled' : ''
+        } ${className}`}
+        {...extraProps}
+        style={style ?? null}
       >
         <span
           className={`rixun-toggle-switch rixun-toggle-${corners} ${switchClassName}`}
+          {...switchExtraProps}
         />
       </div>
     </div>
@@ -40,6 +50,7 @@ Toggle.defaultProps = {
   type: 'border',
   corners: 'circle',
   className: '',
+  disabled: false,
   containerClassName: '',
   switchClassName: '',
 };
@@ -53,8 +64,10 @@ Toggle.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.oneOf(['border', 'no-border']),
   style: PropTypes.object,
-  // size: PropTypes.oneOf([])
   extraProps: PropTypes.object,
+  checkboxExtraProps: PropTypes.object,
+  containerExtraProps: PropTypes.object,
   containerClassName: PropTypes.string,
+  switchExtraProps: PropTypes.object,
   switchClassName: PropTypes.string,
 };

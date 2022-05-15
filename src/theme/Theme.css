@@ -12,9 +12,16 @@
   --highlight50: #e5f4fc;
   --highlight25: #eaeaea;
 
-  --disabled-background: #ccc;
+  --lightgrey: #ddd;
+  --mid-lightgrey: #ccc;
+  --midgrey: #aaa;
+  --middarkgrey: #888;
+  --darkgrey: #555;
+
+  --disabled-background: var(--lightgrey);
   --disabled-text: #757575;
   --hover-dropdown-option: #bebebe;
+  --inactive-background: var(--mid-lightgrey);
 
   --primary: var(--highlight600);
   --primary-hover: var(--highlight700);
