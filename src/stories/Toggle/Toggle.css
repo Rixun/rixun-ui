@@ -1,0 +1,41 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.rixun-toggle-active .toggle-color {
+  background-color: darkred;
+  border-color: darkred;
+}
+.toggle-color:hover {
+  background-color: darkred;
+  border-color: darkred;
+}
+.rixun-toggle-active .toggle-nb-color {
+  background-color: darkred;
+}
+.toggle-nb-color:hover {
+  background-color: darkred;
+}
+
+.toggle-switch-color {
+  background-color: #e54d00;
+}
+
+.toggle-container-class .toggle-main-class {
+  background-color: #00e5c0;
+  border-color: #00e5c0;
+}
+.toggle-container-class .toggle-main-nb-class {
+  background-color: #00e5c0;
+}
+.toggle-main-class:hover,
+.toggle-main-nb-class:hover {
+  background-color: #00e5c0;
+}
+
+.toggle-size-class {
+  width: 80px;
+  height: 40px;
+}

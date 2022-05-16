@@ -1,0 +1,98 @@
+.rixun-toggle-container {
+  width: 40px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.rixun-toggle-container input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.rixun-toggle {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--inactive-background);
+  background-color: var(--inactive-background);
+  background-clip: padding-box;
+  transition: 0.2s ease-in-out;
+  position: relative;
+}
+.rixun-toggle:hover {
+  background-color: var(--primary);
+}
+.rixun-toggle-border:hover {
+  border-color: var(--primary);
+}
+.rixun-toggle-active .rixun-toggle-border {
+  border-color: var(--primary);
+}
+.rixun-toggle-active .rixun-toggle {
+  background-color: var(--primary);
+}
+.rixun-toggle-container input:focus + .rixun-toggle {
+  outline: 1px solid var(--text-black);
+}
+.rixun-toggle-no-border {
+  border: 1px solid transparent;
+}
+.rixun-toggle-disabled,
+.rixun-toggle-disabled:hover {
+  border-color: var(--lightgrey);
+  background-color: var(--lightgrey);
+  cursor: not-allowed;
+}
+
+.rixun-toggle-switch {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--text-white);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1);
+  transition: left 0.2s ease-in-out;
+}
+.rixun-toggle-switch::before {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  box-shadow: -1px 0.75px 1px -0.5px rgba(0, 0, 0, 0.25);
+}
+.rixun-toggle-switch::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  box-shadow: 1px 0.75px 1px -0.5px rgba(0, 0, 0, 0.25);
+}
+.rixun-toggle-no-border .rixun-toggle-switch {
+  left: -1px;
+  top: -0.5px;
+  width: 52%;
+  height: 103%;
+}
+
+.rixun-toggle-active .rixun-toggle-switch {
+  left: 50%;
+}
+.rixun-toggle-active .rixun-toggle-no-border .rixun-toggle-switch {
+  left: 51%;
+}
+
+.rixun-toggle-round {
+  border-radius: 0.3em;
+}
+.rixun-toggle-square {
+  border-radius: none;
+}
+.rixun-toggle-circle {
+  border-radius: 1000em;
+}
