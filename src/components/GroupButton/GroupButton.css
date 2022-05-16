@@ -1,0 +1,63 @@
+.rixun-gb {
+  cursor: pointer;
+}
+
+/* ---- Modern Design CSS below ---- */
+
+.rixun-gb-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Hide default radio button */
+.rixun-gb-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Custom radio button */
+.rixun-custom-gb {
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.rixun-gb-container:hover input ~ .rixun-custom-gb {
+  background-color: #ccc;
+}
+.rixun-gb-container input:checked ~ .rixun-custom-gb {
+  background-color: #2196f3;
+}
+
+/* White dot for custom radio button when checked */
+.rixun-custom-gb:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+/* Show the custom radio button white dot when checked */
+.rixun-gb-container input:checked ~ .rixun-custom-gb:after {
+  display: block;
+}
+/* White dot styling */
+.rixun-gb-container .rixun-custom-gb:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.rixun-gb-container input:focus-visible + .rixun-custom-gb {
+  border: 1px solid #000;
+}

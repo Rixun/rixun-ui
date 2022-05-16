@@ -1,0 +1,10 @@
+.groupbutton-form {
+  border: 1px black solid;
+  border-radius: 0.5rem;
+  width: 12rem;
+  padding: 0.5rem;
+}
+
+.groupbutton-btn {
+  padding: 0.2rem;
+}
