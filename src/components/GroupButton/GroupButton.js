@@ -42,7 +42,7 @@ export const GroupButton = (props) => {
             onChange={onChange}
             {...extraProps}
           />
-          <label htmlFor={name}>{placeholder}</label>
+          <label htmlFor={id}>{placeholder}</label>
           <br />
         </>
       )
