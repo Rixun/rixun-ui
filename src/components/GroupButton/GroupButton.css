@@ -1,10 +1,10 @@
-.rixun-groupbutton {
+.rixun-gb {
   cursor: pointer;
 }
 
 /* ---- Modern Design CSS below ---- */
 
-.container {
+.rixun-gb-container {
   display: block;
   position: relative;
   padding-left: 2rem;
@@ -14,14 +14,14 @@
 }
 
 /* Hide default radio button */
-.container input {
+.rixun-gb-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
 /* Custom radio button */
-.customRadioBtn {
+.rixun-custom-gb {
   position: absolute;
   /* top: 0; */
   left: 0;
@@ -31,29 +31,33 @@
   border-radius: 50%;
 }
 
-.container:hover input ~ .customRadioBtn {
+.rixun-gb-container:hover input ~ .rixun-custom-gb {
   background-color: #ccc;
 }
-.container input:checked ~ .customRadioBtn {
+.rixun-gb-container input:checked ~ .rixun-custom-gb {
   background-color: #2196f3;
 }
 
 /* White dot for custom radio button when checked */
-.customRadioBtn:after {
+.rixun-custom-gb:after {
   content: '';
   position: absolute;
   display: none;
 }
 /* Show the custom radio button white dot when checked */
-.container input:checked ~ .customRadioBtn:after {
+.rixun-gb-container input:checked ~ .rixun-custom-gb:after {
   display: block;
 }
 /* White dot styling */
-.container .customRadioBtn:after {
+.rixun-gb-container .rixun-custom-gb:after {
   top: 9px;
   left: 9px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+.rixun-gb-container input:focus-visible + .rixun-custom-gb {
+  border: 1px solid #000;
 }
