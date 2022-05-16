@@ -2,7 +2,6 @@
   cursor: pointer;
 }
 
-
 /* ---- Modern Design CSS below ---- */
 
 .container {
@@ -36,7 +35,7 @@
   background-color: #ccc;
 }
 .container input:checked ~ .customRadioBtn {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* White dot for custom radio button when checked */
@@ -51,10 +50,10 @@
 }
 /* White dot styling */
 .container .customRadioBtn:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }

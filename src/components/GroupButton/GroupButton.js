@@ -11,31 +11,32 @@ export const GroupButton = (props) => {
     value,
     placeholder,
     onChange,
-    extraProps
+    extraProps,
   } = props;
 
   return (
     <>
       {modern ? (
-        <label className='container'>{placeholder}
+        <label className="container">
+          {placeholder}
           <input
             className={className}
             ref={groupButtonRef}
-            type='radio'
+            type="radio"
             id={id}
             name={name}
             value={value}
             onChange={onChange}
             {...extraProps}
           />
-          <span className='customRadioBtn'></span>
+          <span className="customRadioBtn"></span>
         </label>
       ) : (
         <>
           <input
             className={`rixun-groupbutton ${className}`}
             ref={groupButtonRef}
-            type='radio'
+            type="radio"
             id={id}
             name={name}
             value={value}
@@ -45,15 +46,14 @@ export const GroupButton = (props) => {
           <label htmlFor={id}>{placeholder}</label>
           <br />
         </>
-      )
-      }
+      )}
     </>
-  )
-}
+  );
+};
 
 GroupButton.defaultProps = {
-  name: 'rixun-groupbutton'
-}
+  name: 'rixun-groupbutton',
+};
 
 GroupButton.propTypes = {
   className: PropTypes.string,
@@ -64,5 +64,5 @@ GroupButton.propTypes = {
   value: PropTypes.string,
   placeholder: PropTypes.string,
   onChangeTest: PropTypes.func,
-  extraProps: PropTypes.object
-}
+  extraProps: PropTypes.object,
+};
