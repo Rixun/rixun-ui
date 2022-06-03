@@ -1,0 +1,20 @@
+hr {
+  margin: 30px 0;
+}
+
+.blue-card {
+  background-color: lightblue;
+}
+
+.blue-shadow-card {
+  box-shadow: 0px 2px 8px 0px rgba(60, 193, 255, 0.15);
+}
+.blue-shadow-card:hover {
+  box-shadow: 0px 2px 12px 0px rgba(60, 193, 255, 0.15);
+}
+.blue-border-card {
+  border-color: lightblue;
+}
+.blue-border-card:hover {
+  box-shadow: 0px 2px 4px 0px rgba(60, 193, 255, 0.15);
+}
