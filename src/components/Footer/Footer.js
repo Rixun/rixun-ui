@@ -3,10 +3,19 @@ import './Footer.css';
 import '../../theme/Theme.css';
 
 export const Footer = (props) => {
+  const { children, position, className, id, name, footerRef, style, extraProps } = props;
+
   return (
     <>
-      <footer>
-        <p>Test Footer</p>
+      <footer
+        className={`rixun-footer content-positon-${position} ${className}`}
+        id={id}
+        name={name}
+        ref={footerRef}
+        style={style}
+        {...extraProps}
+      >
+        {children}
       </footer>
     </>
   );
@@ -14,9 +23,12 @@ export const Footer = (props) => {
 
 Footer.defaultProps = {
   className: '',
+  position: 'middle'
 };
 
 Footer.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  position: PropTypes.string,
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,

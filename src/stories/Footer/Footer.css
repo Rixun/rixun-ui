@@ -1,0 +1,31 @@
+.footer {
+  background-color: #2e2e2e;
+  color: #FFF;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  padding-bottom: 10px;
+}
+
+.container {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.col1 {
+  background-color:#aaa;
+}
+.col2 {
+  background-color:#bbb;
+}
+.col3 {
+  background-color: #ccc;
+}

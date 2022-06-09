@@ -1,0 +1,23 @@
+.rixun-footer {
+  min-height: 15vh;  
+  display: flex;
+  align-items: center;
+  /* height: auto; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* width: 100%; */  
+}
+
+.rixun-footer p {
+  padding: 0 1rem;
+}
+
+.content-positon-left {
+  justify-content: left;
+}
+.content-positon-center {
+  justify-content: center;
+}
+.content-positon-right {
+  justify-content: right;
+}
