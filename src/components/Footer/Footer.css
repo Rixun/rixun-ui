@@ -2,10 +2,6 @@
   min-height: 15vh;  
   display: flex;
   align-items: center;
-  /* height: auto; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* width: 100%; */  
 }
 
 .rixun-footer p {
@@ -20,4 +16,8 @@
 }
 .content-positon-right {
   justify-content: right;
+}
+
+.content-layout-vertical {
+  flex-direction: column;
 }

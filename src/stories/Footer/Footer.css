@@ -3,21 +3,17 @@
   color: #FFF;
 }
 
-ul {
-  list-style: none;
-}
-li {
-  padding-bottom: 10px;
-}
-
 .container {
   box-sizing: border-box;
 }
-
 .column {
   float: left;
   width: 33.33%;
   padding: 10px;
+}
+
+li {
+  list-style: none;
 }
 
 .col1 {
@@ -28,4 +24,12 @@ li {
 }
 .col3 {
   background-color: #ccc;
+}
+
+.nav-link {
+  padding-bottom: 100px;
+}
+.btn-link {
+  border:1px solid red;
+  margin: 1rem;
 }

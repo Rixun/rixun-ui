@@ -3,19 +3,32 @@ import './Footer.css';
 import '../../theme/Theme.css';
 
 export const Footer = (props) => {
-  const { children, position, className, id, name, footerRef, style, extraProps } = props;
+  const { children, layout, columns, position, className, id, name, footerRef, style, extraProps } = props;
 
   return (
     <>
       <footer
-        className={`rixun-footer content-positon-${position} ${className}`}
+        className={`rixun-footer content-positon-${position} content-layout-${layout} ${className}`}
         id={id}
         name={name}
         ref={footerRef}
         style={style}
         {...extraProps}
       >
-        {children}
+        {
+          // columns.map((col) => (
+          //   <p className={col[0].btnClassName}>{col[0].btnName}</p>
+          // ))
+
+          // ** Footer Multiple Columns **
+          // columns.forEach(item => {
+          //   item.map((col) => (
+          //     <p className={col[0].btnClassName}>{col[0].btnName}</p>
+          //   ))
+          // })
+
+          children
+        }
       </footer>
     </>
   );
@@ -28,6 +41,8 @@ Footer.defaultProps = {
 
 Footer.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  layout: PropTypes.string,
+  columns: PropTypes.array,
   position: PropTypes.string,
   className: PropTypes.string,
   id: PropTypes.string,

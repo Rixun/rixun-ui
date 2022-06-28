@@ -5,65 +5,50 @@ import './Footer.css';
 
 const stories = storiesOf('Footer', module);
 
-const footerLinks = (
-  <>
-    <p>Home</p>
-    <p>About Me</p>
-    <p>Contact</p>
-  </>
+const btnLinks = [
+  [{to: '1#', linkClassName: 'nav-link', btnClassName: 'btn-link1', btnName: 'Home'}],
+  [{to: '2#', linkClassName: 'nav-link', btnClassName: 'btn-link2', btnName: 'Blog'}],
+  [{to: '3#', linkClassName: 'nav-link', btnClassName: 'btn-link3', btnName: 'About'}],
+  [{to: '4#', linkClassName: 'nav-link', btnClassName: 'btn-link4', btnName: 'Contact Me'}]
+];
+
+const btnLinks2 = [
+  [{to: '1#', linkClassName: 'nav-link', btnClassName: 'btn-link5', btnName: 'Home2'}],
+  [{to: '2#', linkClassName: 'nav-link', btnClassName: 'btn-link6', btnName: 'Blog2'}],
+  [{to: '3#', linkClassName: 'nav-link', btnClassName: 'btn-link7', btnName: 'About2'}],
+  [{to: '4#', linkClassName: 'nav-link', btnClassName: 'btn-link8', btnName: 'Contact Me2'}]
+];
+
+const multiColV2 = (
+  <ul>
+    <li>Home</li>
+    <li>Blog</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
 );
 
-const footerLinks2 = (
-  <>
-    <ul>
-      <li>test1</li>
-      <li>test2</li>
-      <li>test3</li>
-      <li>test4</li>
-      <li>test5</li>
-    </ul>
-    <ul>
-      <li>test1</li>
-      <li>test2</li>
-    </ul>
-  </>
-);
-
-stories.add('Footer Styles', () => {
+stories.add('Footer Basic', () => {
   return (
     <>
       <Footer
         className="footer"
-        position="left"
-      >
-        {footerLinks}
-      </Footer>
+        position="center"
+        columns={btnLinks}
+      />
+    </>
+  );
+});
 
-      <br /><br />
-
+stories.add('Footer Vertical Column', () => {
+  return (
+    <>
       <Footer
         className="footer"
         position="center"
-      >
-        {footerLinks}
-      </Footer>
-
-      <br /><br />
-
-      <Footer
-        className="footer"
-        position="right"
-      >
-        {footerLinks}
-      </Footer>
-
-      <br /><br />
-
-      <Footer
-        className="footer"
-      >
-        {footerLinks2}
-      </Footer>
+        layout="vertical"
+        columns={btnLinks}
+      />
     </>
   );
 });
@@ -73,15 +58,28 @@ stories.add('Footer Multiple Columns', () => {
     <>
       <Footer
         className="footer"
+        position="center"
+        // layout="vertical"
+        columns={[btnLinks, btnLinks2]}
+      />
+    </>
+  );
+});
+
+stories.add('Footer Multiple Columns V2', () => {
+  return (
+    <>
+      <Footer
+        className="footer"
       >
         <div className="column col1">
-          {footerLinks}
+          {multiColV2}
         </div>
         <div className="column col2">
-          {footerLinks}
+          {multiColV2}
         </div>
         <div className="column col3">
-          {footerLinks}
+          {multiColV2}
         </div>
       </Footer>
     </>
