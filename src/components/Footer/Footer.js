@@ -16,9 +16,9 @@ export const Footer = (props) => {
         {...extraProps}
       >
         {
-          // columns.map((col) => (
-          //   <p className={col[0].btnClassName}>{col[0].btnName}</p>
-          // ))
+          columns.map((col) => (
+            <p className={col[0].btnClassName}>{col[0].btnName}</p>
+          ))
 
           // ** Footer Multiple Columns **
           // columns.forEach(item => {
@@ -27,7 +27,7 @@ export const Footer = (props) => {
           //   ))
           // })
 
-          children
+          // children
         }
       </footer>
     </>
