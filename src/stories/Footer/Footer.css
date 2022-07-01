@@ -3,6 +3,14 @@
   color: #FFF;
 }
 
-li {
-  list-style: none;
+.container-margin {
+  margin: 2rem;
+}
+
+.link-orange-border {
+  font-style: italic;
+}
+
+.link-row-padding {
+  padding: 0 1rem;
 }

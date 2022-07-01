@@ -1,41 +1,30 @@
 import { storiesOf } from '@storybook/react';
-import { useRef, useState } from 'react';
 import { Footer } from '../../components/Footer';
 import './Footer.css';
 
 const stories = storiesOf('Footer', module);
 
-const btnLinks = [
+const btnLinks1 = [
   [
     {
       to: '1#',
-      linkClassName: 'nav-link',
-      btnClassName: 'btn-link1',
-      btnName: 'Home',
+      linkClassName: 'link-col',
+      linkName: 'Home',
     },
-  ],
-  [
     {
       to: '2#',
-      linkClassName: 'nav-link',
-      btnClassName: 'btn-link2',
-      btnName: 'Blog',
+      linkClassName: 'link-col',
+      linkName: 'Blog',
     },
-  ],
-  [
     {
       to: '3#',
-      linkClassName: 'nav-link',
-      btnClassName: 'btn-link3',
-      btnName: 'About',
+      linkClassName: 'link-col',
+      linkName: 'About',
     },
-  ],
-  [
     {
       to: '4#',
-      linkClassName: 'nav-link',
-      btnClassName: 'btn-link4',
-      btnName: 'Contact Me',
+      linkClassName: 'link-col',
+      linkName: 'Contact Me',
     },
   ],
 ];
@@ -45,41 +34,135 @@ const btnLinks2 = [
     {
       to: '1#',
       linkClassName: 'link-col',
-      linkName: 'Home1',
+      linkName: 'Home',
     },
     {
-      to: '1#',
+      to: '2#',
       linkClassName: 'link-col',
-      linkName: 'Home2',
+      linkName: 'Blog',
     },
     {
-      to: '1#',
+      to: '3#',
       linkClassName: 'link-col',
-      linkName: 'Home3',
+      linkName: 'About',
+    },
+    {
+      to: '4#',
+      linkClassName: 'link-col',
+      linkName: 'Contact Me',
     },
   ],
   [
     {
       to: '1#',
-      linkClassName: 'link-row',
-      linkName: 'Home4',
+      linkClassName: 'link-col',
+      linkName: 'Home',
     },
     {
-      to: '1#',
-      linkClassName: 'link-row',
-      linkName: 'Home5',
+      to: '2#',
+      linkClassName: 'link-col',
+      linkName: 'Blog',
     },
     {
-      to: '1#',
-      linkClassName: 'link-row',
-      linkName: 'Home6',
+      to: '3#',
+      linkClassName: 'link-col',
+      linkName: 'About',
+    },
+    {
+      to: '4#',
+      linkClassName: 'link-col',
+      linkName: 'Contact Me',
     },
   ],
   [
     {
       to: '1#',
-      linkClassName: 'nav-link',
-      linkName: 'Home7',
+      linkClassName: 'link-col',
+      linkName: 'Home',
+    },
+    {
+      to: '2#',
+      linkClassName: 'link-col',
+      linkName: 'Blog',
+    },
+    {
+      to: '3#',
+      linkClassName: 'link-col',
+      linkName: 'About',
+    },
+    {
+      to: '4#',
+      linkClassName: 'link-col',
+      linkName: 'Contact Me',
+    },
+  ],
+  [
+    {
+      to: '1#',
+      linkClassName: 'link-col',
+      linkName: 'Home',
+    },
+    {
+      to: '2#',
+      linkClassName: 'link-col',
+      linkName: 'Blog',
+    },
+    {
+      to: '3#',
+      linkClassName: 'link-col',
+      linkName: 'About',
+    },
+    {
+      to: '4#',
+      linkClassName: 'link-col',
+      linkName: 'Contact Me',
+    },
+  ],
+];
+
+const btnLinks3 = [
+  [
+    {
+      to: '1#',
+      linkClassName: 'link-col',
+      linkName: 'Home',
+    },
+    {
+      to: '2#',
+      linkClassName: 'link-col',
+      linkName: 'Blog',
+    },
+    {
+      to: '3#',
+      linkClassName: 'link-col',
+      linkName: 'About',
+    },
+    {
+      to: '4#',
+      linkClassName: 'link-col',
+      linkName: 'Contact Me',
+    },
+  ],
+  [
+    {
+      to: '1#',
+      linkClassName: 'link-col',
+      linkName: 'Home',
+    },
+    {
+      to: '2#',
+      linkClassName: 'link-col',
+      linkName: 'Blog',
+    },
+    {
+      to: '3#',
+      linkClassName: 'link-col',
+      linkName: 'About',
+    },
+    {
+      to: '4#',
+      linkClassName: 'link-col',
+      linkName: 'Contact Me',
     },
   ],
 ];
@@ -87,19 +170,28 @@ const btnLinks2 = [
 stories.add('Footer Basic', () => {
   return (
     <>
-      <Footer className="footer" position="center" columns={btnLinks} />
+      <Footer
+        className="footer"
+        linkContainerClassName="container-margin"
+        linkClassName="link-row-padding"
+        position="center"
+        layout="row"
+        columns={btnLinks1}
+      />
     </>
   );
 });
 
-stories.add('Footer Vertical Column', () => {
+stories.add('Footer Column', () => {
   return (
     <>
       <Footer
         className="footer"
-        position="left"
-        layout="vertical"
-        columns={btnLinks}
+        linkContainerClassName="container-margin"
+        linkClassName="link-orange-border"
+        position="center"
+        layout="column"
+        columns={btnLinks2}
       />
     </>
   );
@@ -110,18 +202,22 @@ stories.add('Footer Multiple Columns', () => {
     <>
       <Footer
         className="footer"
+        linkContainerClassName="container-margin"
+        linkClassName="link-orange-border"
         position="center"
-        // layout="vertical-left"
-        columns={btnLinks2}
+        layout="column"
+        columns={btnLinks3}
       />
 
       <br />
 
       <Footer
         className="footer"
+        linkContainerClassName="container-margin"
+        linkClassName="link-row-padding"
         position="center"
-        layout="vertical-right"
-        columns={btnLinks2}
+        layout="row"
+        columns={btnLinks3}
       />
     </>
   );

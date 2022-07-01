@@ -3,29 +3,50 @@ import './Footer.css';
 import '../../theme/Theme.css';
 
 export const Footer = (props) => {
-  const { layout, columns, position, className, id, name, footerRef, style, extraProps } = props;
+  const {
+    className,
+    linkContainerClassName,
+    linkClassName,
+    position,
+    layout,
+    columns,
+    id,
+    name,
+    footerRef,
+    style,
+    extraProps,
+  } = props;
 
   return (
     <>
       <footer
-        className={`rixun-footer content-positon-${position} content-layout-${layout} ${className}`}
+        className={`rixun-footer content-positon-${position} ${className}`}
         id={id}
         name={name}
         ref={footerRef}
         style={style}
         {...extraProps}
       >
-        {
-          columns.map((column, colIndex) => {
-            return (
-              <div className={`rixun-item-container`}>
-                    {column.map((item, index) => {
-                      return <p className={`rixun-item-${item.linkClassName}`}>{item.linkName}</p>;
-                    })}
-              </div>
-            );
-          })
-        }
+        {columns.map((column, colIndex) => {
+          return (
+            <div
+              key={colIndex}
+              className={`rixun-link-container rixun-link-container-${layout} ${linkContainerClassName}`}
+            >
+              {column.map((item, index) => {
+                return (
+                  <a
+                    href={item.to}
+                    key={index}
+                    className={`rixun-link-${item.linkClassName} ${linkClassName}`}
+                  >
+                    {item.linkName}
+                  </a>
+                );
+              })}
+            </div>
+          );
+        })}
       </footer>
     </>
   );
@@ -33,13 +54,18 @@ export const Footer = (props) => {
 
 Footer.defaultProps = {
   className: '',
-  position: 'middle'
+  linkContainerClassName: '',
+  linkClassName: '',
+  position: 'middle',
 };
 
 Footer.propTypes = {
+  children: PropTypes.string,
+  linkContainerClassName: PropTypes.string,
+  linkClassName: PropTypes.string,
+  position: PropTypes.string,
   layout: PropTypes.string,
   columns: PropTypes.array,
-  position: PropTypes.string,
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
