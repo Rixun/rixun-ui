@@ -6,36 +6,88 @@ import './Footer.css';
 const stories = storiesOf('Footer', module);
 
 const btnLinks = [
-  [{to: '1#', linkClassName: 'nav-link', btnClassName: 'btn-link1', btnName: 'Home'}],
-  [{to: '2#', linkClassName: 'nav-link', btnClassName: 'btn-link2', btnName: 'Blog'}],
-  [{to: '3#', linkClassName: 'nav-link', btnClassName: 'btn-link3', btnName: 'About'}],
-  [{to: '4#', linkClassName: 'nav-link', btnClassName: 'btn-link4', btnName: 'Contact Me'}]
+  [
+    {
+      to: '1#',
+      linkClassName: 'nav-link',
+      btnClassName: 'btn-link1',
+      btnName: 'Home',
+    },
+  ],
+  [
+    {
+      to: '2#',
+      linkClassName: 'nav-link',
+      btnClassName: 'btn-link2',
+      btnName: 'Blog',
+    },
+  ],
+  [
+    {
+      to: '3#',
+      linkClassName: 'nav-link',
+      btnClassName: 'btn-link3',
+      btnName: 'About',
+    },
+  ],
+  [
+    {
+      to: '4#',
+      linkClassName: 'nav-link',
+      btnClassName: 'btn-link4',
+      btnName: 'Contact Me',
+    },
+  ],
 ];
 
 const btnLinks2 = [
-  [{to: '1#', linkClassName: 'nav-link', btnClassName: 'btn-link5', btnName: 'Home2'}],
-  [{to: '2#', linkClassName: 'nav-link', btnClassName: 'btn-link6', btnName: 'Blog2'}],
-  [{to: '3#', linkClassName: 'nav-link', btnClassName: 'btn-link7', btnName: 'About2'}],
-  [{to: '4#', linkClassName: 'nav-link', btnClassName: 'btn-link8', btnName: 'Contact Me2'}]
+  [
+    {
+      to: '1#',
+      linkClassName: 'link-col',
+      linkName: 'Home1',
+    },
+    {
+      to: '1#',
+      linkClassName: 'link-col',
+      linkName: 'Home2',
+    },
+    {
+      to: '1#',
+      linkClassName: 'link-col',
+      linkName: 'Home3',
+    },
+  ],
+  [
+    {
+      to: '1#',
+      linkClassName: 'link-row',
+      linkName: 'Home4',
+    },
+    {
+      to: '1#',
+      linkClassName: 'link-row',
+      linkName: 'Home5',
+    },
+    {
+      to: '1#',
+      linkClassName: 'link-row',
+      linkName: 'Home6',
+    },
+  ],
+  [
+    {
+      to: '1#',
+      linkClassName: 'nav-link',
+      linkName: 'Home7',
+    },
+  ],
 ];
-
-const multiColV2 = (
-  <ul>
-    <li>Home</li>
-    <li>Blog</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-);
 
 stories.add('Footer Basic', () => {
   return (
     <>
-      <Footer
-        className="footer"
-        position="center"
-        columns={btnLinks}
-      />
+      <Footer className="footer" position="center" columns={btnLinks} />
     </>
   );
 });
@@ -45,7 +97,7 @@ stories.add('Footer Vertical Column', () => {
     <>
       <Footer
         className="footer"
-        position="center"
+        position="left"
         layout="vertical"
         columns={btnLinks}
       />
@@ -59,29 +111,18 @@ stories.add('Footer Multiple Columns', () => {
       <Footer
         className="footer"
         position="center"
-        // layout="vertical"
-        columns={[btnLinks, btnLinks2]}
+        // layout="vertical-left"
+        columns={btnLinks2}
       />
-    </>
-  );
-});
 
-stories.add('Footer Multiple Columns V2', () => {
-  return (
-    <>
+      <br />
+
       <Footer
         className="footer"
-      >
-        <div className="column col1">
-          {multiColV2}
-        </div>
-        <div className="column col2">
-          {multiColV2}
-        </div>
-        <div className="column col3">
-          {multiColV2}
-        </div>
-      </Footer>
+        position="center"
+        layout="vertical-right"
+        columns={btnLinks2}
+      />
     </>
   );
 });
