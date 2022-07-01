@@ -14,7 +14,6 @@ export const Checkbox = (props) => {
     defaultChecked,
     checked,
     style,
-    type,
     disabled,
     labelText,
     tickClassName,
