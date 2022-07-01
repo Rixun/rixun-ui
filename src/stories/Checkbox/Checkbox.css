@@ -1,0 +1,11 @@
+.checkbox-red::before {
+  border-color: darkred;
+}
+.checkbox-red:focus::after {
+  background-color: rgba(139, 0, 0, 0.1);
+  border-color: red;
+}
+
+.tick-red {
+  stroke: darkred;
+}
