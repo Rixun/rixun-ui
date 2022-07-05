@@ -8,22 +8,18 @@ const btnLinks1 = [
   [
     {
       to: '1#',
-      linkClassName: 'link-col',
       linkName: 'Home',
     },
     {
       to: '2#',
-      linkClassName: 'link-col',
       linkName: 'Blog',
     },
     {
       to: '3#',
-      linkClassName: 'link-col',
       linkName: 'About',
     },
     {
       to: '4#',
-      linkClassName: 'link-col',
       linkName: 'Contact Me',
     },
   ],
@@ -33,88 +29,72 @@ const btnLinks2 = [
   [
     {
       to: '1#',
-      linkClassName: 'link-col',
       linkName: 'Home',
     },
     {
       to: '2#',
-      linkClassName: 'link-col',
       linkName: 'Blog',
     },
     {
       to: '3#',
-      linkClassName: 'link-col',
       linkName: 'About',
     },
     {
       to: '4#',
-      linkClassName: 'link-col',
       linkName: 'Contact Me',
     },
   ],
   [
     {
       to: '1#',
-      linkClassName: 'link-col',
       linkName: 'Home',
     },
     {
       to: '2#',
-      linkClassName: 'link-col',
       linkName: 'Blog',
     },
     {
       to: '3#',
-      linkClassName: 'link-col',
       linkName: 'About',
     },
     {
       to: '4#',
-      linkClassName: 'link-col',
       linkName: 'Contact Me',
     },
   ],
   [
     {
       to: '1#',
-      linkClassName: 'link-col',
       linkName: 'Home',
     },
     {
       to: '2#',
-      linkClassName: 'link-col',
       linkName: 'Blog',
     },
     {
       to: '3#',
-      linkClassName: 'link-col',
       linkName: 'About',
     },
     {
       to: '4#',
-      linkClassName: 'link-col',
       linkName: 'Contact Me',
     },
   ],
   [
     {
       to: '1#',
-      linkClassName: 'link-col',
       linkName: 'Home',
     },
     {
       to: '2#',
-      linkClassName: 'link-col',
       linkName: 'Blog',
     },
     {
       to: '3#',
-      linkClassName: 'link-col',
       linkName: 'About',
     },
     {
       to: '4#',
-      linkClassName: 'link-col',
       linkName: 'Contact Me',
     },
   ],
@@ -124,44 +104,36 @@ const btnLinks3 = [
   [
     {
       to: '1#',
-      linkClassName: 'link-col',
       linkName: 'Home',
     },
     {
       to: '2#',
-      linkClassName: 'link-col',
       linkName: 'Blog',
     },
     {
       to: '3#',
-      linkClassName: 'link-col',
       linkName: 'About',
     },
     {
       to: '4#',
-      linkClassName: 'link-col',
       linkName: 'Contact Me',
     },
   ],
   [
     {
       to: '1#',
-      linkClassName: 'link-col',
       linkName: 'Home',
     },
     {
       to: '2#',
-      linkClassName: 'link-col',
       linkName: 'Blog',
     },
     {
       to: '3#',
-      linkClassName: 'link-col',
       linkName: 'About',
     },
     {
       to: '4#',
-      linkClassName: 'link-col',
       linkName: 'Contact Me',
     },
   ],

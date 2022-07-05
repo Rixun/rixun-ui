@@ -27,11 +27,6 @@
   flex-direction: row;
 }
 
-.rixun-link-link-col {
-}
-.rixun-link-link-row {
-}
-
-a {
+.rixun-link {
   text-decoration: none;
 }

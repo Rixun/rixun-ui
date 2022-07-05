@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import './Footer.css';
-import '../../theme/Theme.css';
 
 export const Footer = (props) => {
   const {
@@ -20,7 +19,7 @@ export const Footer = (props) => {
   return (
     <>
       <footer
-        className={`rixun-footer content-positon-${position} ${className}`}
+        className={`rixun-footer rixun-content-positon-${position} ${className}`}
         id={id}
         name={name}
         ref={footerRef}
@@ -38,7 +37,7 @@ export const Footer = (props) => {
                   <a
                     href={item.to}
                     key={index}
-                    className={`rixun-link-${item.linkClassName} ${linkClassName}`}
+                    className={`rixun-link ${linkClassName}`}
                   >
                     {item.linkName}
                   </a>
@@ -56,7 +55,7 @@ Footer.defaultProps = {
   className: '',
   linkContainerClassName: '',
   linkClassName: '',
-  position: 'middle',
+  position: 'center',
 };
 
 Footer.propTypes = {
