@@ -1,6 +1,10 @@
 .footer {
-  background-color: #2e2e2e;
+  background-color: #aaa;
   color: #FFF;
+}
+
+.example-border {
+  border: 1px solid black;
 }
 
 .container-margin {
@@ -9,8 +13,7 @@
 
 .link-orange-border {
   font-style: italic;
-}
-
-.link-row-padding {
-  padding: 0 1rem;
+  border: 1px orange solid;
+  border-radius: 5px;
+  padding: 0.5rem;
 }

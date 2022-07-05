@@ -54,7 +54,6 @@ export const Footer = (props) => {
 Footer.defaultProps = {
   className: '',
   linkContainerClassName: '',
-  linkClassName: '',
   position: 'center',
 };
 

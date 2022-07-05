@@ -4,13 +4,13 @@
   align-items: center;
 }
 
-.content-positon-left {
+.rixun-content-positon-left {
   justify-content: left;
 }
-.content-positon-center {
+.rixun-content-positon-center {
   justify-content: center;
 }
-.content-positon-right {
+.rixun-content-positon-right {
   justify-content: right;
 }
 
@@ -29,4 +29,6 @@
 
 .rixun-link {
   text-decoration: none;
+  color: var(--text-black);
+  margin: 0.5rem;
 }

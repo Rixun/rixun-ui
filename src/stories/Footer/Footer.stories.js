@@ -142,14 +142,31 @@ const btnLinks3 = [
 stories.add('Footer Basic', () => {
   return (
     <>
+    <Footer
+        columns={btnLinks1}
+        className="example-border"
+      />
+
+      <br />
+
       <Footer
         className="footer"
         linkContainerClassName="container-margin"
-        linkClassName="link-row-padding"
         position="center"
         layout="row"
         columns={btnLinks1}
       />
+
+      <br />
+
+      <Footer
+        className="footer"
+        linkContainerClassName="container-margin"
+        linkClassName="link-orange-border"
+        position="center"
+        layout="row"
+        columns={btnLinks1}
+      />    
     </>
   );
 });
@@ -160,7 +177,7 @@ stories.add('Footer Column', () => {
       <Footer
         className="footer"
         linkContainerClassName="container-margin"
-        linkClassName="link-orange-border"
+        
         position="center"
         layout="column"
         columns={btnLinks2}
@@ -186,7 +203,6 @@ stories.add('Footer Multiple Columns', () => {
       <Footer
         className="footer"
         linkContainerClassName="container-margin"
-        linkClassName="link-row-padding"
         position="center"
         layout="row"
         columns={btnLinks3}
