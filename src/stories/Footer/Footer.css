@@ -1,0 +1,19 @@
+.footer {
+  background-color: #aaa;
+  color: #FFF;
+}
+
+.example-border {
+  border: 1px solid black;
+}
+
+.container-margin {
+  margin: 2rem;
+}
+
+.link-orange-border {
+  font-style: italic;
+  border: 1px orange solid;
+  border-radius: 5px;
+  padding: 0.5rem;
+}

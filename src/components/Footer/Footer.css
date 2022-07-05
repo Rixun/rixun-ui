@@ -1,0 +1,34 @@
+.rixun-footer {
+  min-height: 15vh;  
+  display: flex;
+  align-items: center;
+}
+
+.rixun-content-positon-left {
+  justify-content: left;
+}
+.rixun-content-positon-center {
+  justify-content: center;
+}
+.rixun-content-positon-right {
+  justify-content: right;
+}
+
+.rixun-link-container {
+  display: flex;
+  margin: 5px;
+  padding: 5px;  
+}
+
+.rixun-link-container-column {
+  flex-direction: column;
+}
+.rixun-link-container-row {
+  flex-direction: row;
+}
+
+.rixun-link {
+  text-decoration: none;
+  color: var(--text-black);
+  margin: 0.5rem;
+}
