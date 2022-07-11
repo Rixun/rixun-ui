@@ -37,3 +37,7 @@
   --text-white: #fff;
   --text-black: #000;
 }
+
+body {
+  font-family: arial;
+}
