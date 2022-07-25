@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Checkbox } from '../../components/Checkbox';
 import './Checkbox.css';

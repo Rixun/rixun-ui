@@ -16,11 +16,11 @@ export const Input = (props) => {
     onPaste,
     placeholder,
     placeholderClassName,
-    extraProps
+    extraProps,
   } = props;
 
   return (
-    <div className='rixun-input-group'>
+    <div className="rixun-input-group">
       <input
         className={`rixun-input ${className}`}
         ref={rixunRef}
@@ -35,18 +35,23 @@ export const Input = (props) => {
         required
         {...extraProps}
       />
-      <label htmlFor={id} className={`rixun-input-label ${placeholderClassName}`}>{placeholder}</label>
+      <label
+        htmlFor={id}
+        className={`rixun-input-label ${placeholderClassName}`}
+      >
+        {placeholder}
+      </label>
     </div>
-  )
-}
+  );
+};
 
 Input.defaultProps = {
   name: 'rixun-input',
   type: 'text',
-}
+};
 
 Input.propTypes = {
-  className: PropTypes.string,  
+  className: PropTypes.string,
   rixunRef: PropTypes.object,
   id: PropTypes.string,
   name: PropTypes.string,
@@ -56,6 +61,7 @@ Input.propTypes = {
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onPaste: PropTypes.func,
+  placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   placeholderClassName: PropTypes.string,
   extraProps: PropTypes.object,
-}
+};

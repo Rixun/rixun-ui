@@ -3,18 +3,11 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 export const Card = (props) => {
-  const {
-    className,
-    corners,
-    children,
-    onClick,
-    id,
-    type,
-    style,
-    ...extraProps
-  } = props;
+  const { className, corners, children, onClick, id, type, style, extraProps } =
+    props;
   return (
     <div
+      id={id}
       className={`rixun-card-${type} rixun-card-${corners} ${className} `}
       onClick={onClick}
       style={style}
@@ -33,6 +26,7 @@ Card.defaultProps = {
 
 Card.propTypes = {
   className: PropTypes.string,
+  children: PropTypes.node,
   corners: PropTypes.oneOf([
     'square',
     'round',
