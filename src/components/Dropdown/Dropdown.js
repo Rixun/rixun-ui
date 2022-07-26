@@ -66,7 +66,13 @@ Dropdown.defaultProps = {
 };
 
 Dropdown.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  hover: PropTypes.bool,
+  corners: PropTypes.oneOf(['square', 'round']),
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.object,
+    PropTypes.array,
+  ]),
   className: PropTypes.string,
   rixunRef: PropTypes.object,
   id: PropTypes.string,

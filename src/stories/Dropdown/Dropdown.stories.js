@@ -7,41 +7,38 @@ const stories = storiesOf('Dropdown', module);
 
 const dropdownOptions = (
   <>
-    <option value='option1'>Option 1</option>
-    <option value='option2'>Option 2</option>
-    <option value='option3'>Option 3</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
   </>
-)
+);
 
-const testDropdownOptions = [
-  'testing1', 'testing2', 'testing3'
-]
+const testDropdownOptions = ['testing1', 'testing2', 'testing3'];
 
 stories.add('Base Examples', () => {
-  const ref = createRef();
-
   return (
     <>
       <Dropdown
-        name='rixun-dropdown1'
-        placeholder='Square corners'
-        corners='square'
+        name="rixun-dropdown1"
+        placeholder="Square corners"
+        corners="square"
       >
-        { dropdownOptions }
+        {dropdownOptions}
       </Dropdown>
 
-      <br /><br />
+      <br />
+      <br />
 
       <Dropdown
-        name='rixun-dropdown2'
-        placeholder='Round corners'
-        corners='round'
+        name="rixun-dropdown2"
+        placeholder="Round corners"
+        corners="round"
       >
-        { dropdownOptions }
+        {dropdownOptions}
       </Dropdown>
     </>
-  )
-})
+  );
+});
 
 stories.add('Hoverable dropdown', () => {
   const ref = createRef();
@@ -50,27 +47,28 @@ stories.add('Hoverable dropdown', () => {
     <>
       <Dropdown
         rixunRef={ref}
-        id='rixun-dropdown1'
-        name='rixun-dropdown1'
-        placeholder='Select option'
-        corners='square'
+        id="rixun-dropdown1"
+        name="rixun-dropdown1"
+        placeholder="Select option"
+        corners="square"
         hover={true}
       >
-        { testDropdownOptions }
+        {testDropdownOptions}
       </Dropdown>
-    
-      <br /><br />
+
+      <br />
+      <br />
 
       <Dropdown
         rixunRef={ref}
-        id='rixun-dropdown2'
-        name='rixun-dropdown2'
-        placeholder='Select option'
-        corners='round'
+        id="rixun-dropdown2"
+        name="rixun-dropdown2"
+        placeholder="Select option"
+        corners="round"
         hover={true}
       >
-        { testDropdownOptions }
+        {testDropdownOptions}
       </Dropdown>
     </>
-  )
-})
+  );
+});

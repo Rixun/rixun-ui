@@ -64,6 +64,6 @@ GroupButton.propTypes = {
   modern: PropTypes.bool,
   value: PropTypes.string,
   placeholder: PropTypes.string,
-  onChangeTest: PropTypes.func,
+  onChange: PropTypes.func,
   extraProps: PropTypes.object,
 };

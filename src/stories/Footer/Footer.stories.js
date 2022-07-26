@@ -142,10 +142,7 @@ const btnLinks3 = [
 stories.add('Footer Basic', () => {
   return (
     <>
-    <Footer
-        columns={btnLinks1}
-        className="example-border"
-      />
+      <Footer columns={btnLinks1} className="example-border" />
 
       <br />
 
@@ -166,7 +163,7 @@ stories.add('Footer Basic', () => {
         position="center"
         layout="row"
         columns={btnLinks1}
-      />    
+      />
     </>
   );
 });
@@ -177,7 +174,6 @@ stories.add('Footer Column', () => {
       <Footer
         className="footer"
         linkContainerClassName="container-margin"
-        
         position="center"
         layout="column"
         columns={btnLinks2}

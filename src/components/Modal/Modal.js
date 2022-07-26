@@ -57,6 +57,7 @@ Modal.propTypes = {
   active: PropTypes.bool,
   boxType: PropTypes.oneOf(['opaque', 'transparent', 'none']),
   className: PropTypes.string,
+  children: PropTypes.node,
   corners: PropTypes.oneOf(['square', 'round', 'circle']),
   id: PropTypes.string,
   modalRef: PropTypes.object,

@@ -1,6 +1,6 @@
 {
   "name": "rixun-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React UI component library created by Rixun",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
