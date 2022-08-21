@@ -11,7 +11,7 @@ npm install rixun-ui
 ```
 
 ## Usage
-```
+```jsx
 import { Button } from 'rixun-ui';
 
 function MyFunction() {
