@@ -48,7 +48,7 @@ export const Dropdown = (props) => {
           onChange={onChange}
           {...extraProps}
         >
-          {placeholder && (
+          {placeholder !== '' && (
             <option value="" hidden={true}>
               {placeholder}
             </option>
