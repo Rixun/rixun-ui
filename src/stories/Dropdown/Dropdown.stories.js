@@ -18,6 +18,13 @@ const testDropdownOptions = ['testing1', 'testing2', 'testing3'];
 stories.add('Base Examples', () => {
   return (
     <>
+      <Dropdown name="rixun-dropdown1" placeholder="">
+        {dropdownOptions}
+      </Dropdown>
+
+      <br />
+      <br />
+
       <Dropdown
         name="rixun-dropdown1"
         placeholder="Square corners"
