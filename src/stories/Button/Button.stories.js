@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/react';
 import { useRef, useState } from 'react';
-
 import { Button } from '../../components/Button';
 import './Button.css';
 
@@ -9,7 +8,12 @@ const stories = storiesOf('Button', module);
 stories.add('Button Types', () => {
   return (
     <>
-      <Button name="Default" />
+      {/* <Button name="Default" /> */}
+      <Button
+        name="Default"
+        // icon={<FontAwesomeIcon icon={faCoffee}/>}
+        iconPosition="left"
+      />
       <hr />
       <Button name="Outline" type="outline" />
       <hr />

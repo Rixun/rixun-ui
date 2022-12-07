@@ -73,3 +73,14 @@
 .rixun-button-circle {
   border-radius: 1000em;
 }
+
+.button-icon-left {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.button-icon-padding-left {
+  padding-right: 0.4rem;
+}
+.button-icon-padding-right {
+  padding-left: 0.4rem;
+}
