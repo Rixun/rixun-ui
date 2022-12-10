@@ -2,10 +2,13 @@
 .rixun-button-link,
 .rixun-button-outline {
   font-size: 14px;
-  border: none;
+  border: 1px solid var(--primary);
   cursor: pointer;
   padding: 0.9em 2em;
   transition: 0.2s ease-in-out;
+}
+.rixun-button-link {
+  border: none;
 }
 .rixun-button-default:disabled,
 .rixun-button-link:disabled,
