@@ -21,7 +21,7 @@ export const Button = (props) => {
   return (
     <>
       <button
-        className={`rixun-button-${type} rixun-button-${corners} button-icon-${iconPosition} ${className}`}
+        className={`rixun-button-${type} rixun-button-${corners} rx-button-icon-position-${iconPosition} ${className}`}
         id={id}
         ref={buttonRef}
         onClick={onClick}
@@ -29,8 +29,10 @@ export const Button = (props) => {
         disabled={disabled}
         {...extraProps}
       >
-        <span>{name}</span>
-        <span className={`button-icon-padding-${iconPosition}`}>{icon}</span>
+        <div className="rx-button-text">{name}</div>
+        <div className={`rx-button-icon rx-button-icon-${iconPosition}`}>
+          {icon}
+        </div>
       </button>
     </>
   );
@@ -40,6 +42,7 @@ Button.defaultProps = {
   corners: 'round',
   className: '',
   type: 'default',
+  iconPosition: 'right',
 };
 
 Button.propTypes = {

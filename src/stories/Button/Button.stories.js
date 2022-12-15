@@ -3,17 +3,16 @@ import { useRef, useState } from 'react';
 import { Button } from '../../components/Button';
 import './Button.css';
 
+// install these 2 packages to show the icons
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 const stories = storiesOf('Button', module);
 
 stories.add('Button Types', () => {
   return (
     <>
-      {/* <Button name="Default" /> */}
-      <Button
-        name="Default"
-        // icon={<FontAwesomeIcon icon={faCoffee}/>}
-        iconPosition="left"
-      />
+      <Button name="Default" />
       <hr />
       <Button name="Outline" type="outline" />
       <hr />
@@ -35,6 +34,67 @@ stories.add('Button Corner Types', () => {
       <Button name="Square" corners="square" />
       <span style={{ margin: '5px' }} />
       <Button name="Square" corners="square" type="outline" />
+    </>
+  );
+});
+stories.add('Button Types With Icons', () => {
+  return (
+    <>
+      <div>
+        <h4>Add FontAwesome or other svg icons to Story to show icons</h4>
+      </div>
+      <Button
+        name="Default"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+        iconPosition="left"
+      />
+      <span style={{ margin: '5px' }} />
+      <Button
+        name="Default"
+        type="outline"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+      />
+      <hr />
+      <Button
+        name="Circle"
+        corners="circle"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+        iconPosition="left"
+      />
+      <span style={{ margin: '5px' }} />
+      <Button
+        name="Circle"
+        corners="circle"
+        type="outline"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+      />
+      <hr />
+      <Button
+        name="Square"
+        corners="square"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+        iconPosition="left"
+      />
+      <span style={{ margin: '5px' }} />
+      <Button
+        name="Square"
+        corners="square"
+        type="outline"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+      />
+      <hr />
+      <Button
+        name="Link"
+        type="link"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+        iconPosition="left"
+      />
+      <span style={{ margin: '5px' }} />
+      <Button
+        name="Link"
+        type="link"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+      />
     </>
   );
 });
