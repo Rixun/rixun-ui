@@ -98,6 +98,56 @@ stories.add('Button Types With Icons', () => {
     </>
   );
 });
+stories.add('Button Types With icons only', () => {
+  return (
+    <>
+      <Button
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+        iconPosition="left"
+      />
+      <span style={{ margin: '5px' }} />
+      <Button
+        type="outline"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+      />
+      <hr />
+      <Button
+        corners="circle"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+        iconPosition="left"
+      />
+      <span style={{ margin: '5px' }} />
+      <Button
+        corners="circle"
+        type="outline"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+      />
+      <hr />
+      <Button
+        corners="square"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+        iconPosition="left"
+      />
+      <span style={{ margin: '5px' }} />
+      <Button
+        corners="square"
+        type="outline"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+      />
+      <hr />
+      <Button
+        type="link"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+        iconPosition="left"
+      />
+      <span style={{ margin: '5px' }} />
+      <Button
+        type="link"
+        // icon={<FontAwesomeIcon icon={faCoffee} />}
+      />
+    </>
+  )
+});
 stories.add('ClassName Button', () => {
   return (
     <>

@@ -30,9 +30,11 @@ export const Button = (props) => {
         {...extraProps}
       >
         <div className="rx-button-text">{name}</div>
-        <div className={`rx-button-icon rx-button-icon-${iconPosition}`}>
-          {icon}
-        </div>
+        {icon && (
+          <div className={`rx-button-icon rx-button-icon-${name && iconPosition}`}>
+            {icon}
+          </div>
+        )}
       </button>
     </>
   );
