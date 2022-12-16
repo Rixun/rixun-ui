@@ -21,7 +21,7 @@ export const Button = (props) => {
   return (
     <>
       <button
-        className={`rixun-button-${type} rixun-button-${corners} rx-button-icon-position-${iconPosition} ${className}`}
+        className={`rx-button-${type} rx-button-${corners} rx-button-icon-position-${iconPosition} ${className}`}
         id={id}
         ref={buttonRef}
         onClick={onClick}
