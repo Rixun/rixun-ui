@@ -1,30 +1,30 @@
-.rixun-dropdown {
+.rx-dropdown {
   height: 2rem;
   width: 10rem;
 }
 
-.rixun-dropdown-round {
+.rx-dropdown-round {
   border-radius: 0.3em;
 }
-.rixun-dropdown-square {
+.rx-dropdown-square {
   border-radius: none;
 }
 
-.rixun-dropdown-content-round{
+.rx-dropdown-content-round {
   border-radius: 0.3em;
 }
-.rixun-dropdown-content-square{
+.rx-dropdown-content-square {
   border-radius: none;
 }
 
-.rixun-dropdown-button {
+.rx-dropdown-button {
   position: relative;
   display: inline-block;
   /* width: 200px; */
   width: 10rem;
 }
 
-.rixun-dropbutton {
+.rx-dropbutton {
   background-color: var(--primary);
   color: var(--text-white);
   padding: 1rem;
@@ -33,7 +33,7 @@
   width: inherit;
 }
 
-.rixun-dropdown-content {
+.rx-dropdown-content {
   background-color: var(--highlight25);
   position: absolute;
   display: none;
@@ -41,21 +41,21 @@
   width: inherit;
 }
 
-.rixun-dropdown-content a {
+.rx-dropdown-content a {
   color: var(--text-black);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.rixun-dropdown-content a:hover {
+.rx-dropdown-content a:hover {
   background-color: var(--secondary-hover);
 }
 
-.rixun-dropdown-button:hover .rixun-dropdown-content {
+.rx-dropdown-button:hover .rx-dropdown-content {
   display: block;
 }
 
-.dropdown:hover .rixun-dropbutton {
+.dropdown:hover .rx-dropbutton {
   background-color: var(--primary-hover);
 }

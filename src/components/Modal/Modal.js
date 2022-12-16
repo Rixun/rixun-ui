@@ -23,20 +23,20 @@ export const Modal = (props) => {
 
   return (
     <div
-      className={`rixun-modal-container rixun-modal-${active} ${containerClassName}`}
+      className={`rx-modal-container rx-modal-${active} ${containerClassName}`}
       {...containerExtraProps}
     >
       <div
         id={id}
         ref={modalRef}
-        className={`rixun-modal-${boxType} rixun-modal-${corners} ${className} `}
+        className={`rx-modal-${boxType} rx-modal-${corners} ${className} `}
         style={style}
         {...extraProps}
       >
         {active && children}
       </div>
       <div
-        className={`rixun-modal-background ${backgroundClassName}`}
+        className={`rx-modal-background ${backgroundClassName}`}
         onClick={backgroundOnClick}
         {...backgroundExtraProps}
       />

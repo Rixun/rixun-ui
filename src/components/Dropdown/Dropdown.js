@@ -20,14 +20,14 @@ export const Dropdown = (props) => {
   return (
     <>
       {hover ? (
-        <div className="rixun-dropdown-button">
+        <div className="rx-dropdown-button">
           <button
-            className={`rixun-dropbutton rixun-dropdown-${corners} ${className}`}
+            className={`rx-dropbutton rx-dropdown-${corners} ${className}`}
           >
             {placeholder}
           </button>
           <div
-            className={`rixun-dropdown-content rixun-dropdown-content-${corners}`}
+            className={`rx-dropdown-content rx-dropdown-content-${corners}`}
           >
             {children.map((child) => {
               return (
@@ -40,7 +40,7 @@ export const Dropdown = (props) => {
         </div>
       ) : (
         <select
-          className={`rixun-dropdown rixun-dropdown-${corners} ${className}`}
+          className={`rx-dropdown rx-dropdown-${corners} ${className}`}
           ref={rixunRef}
           id={id}
           name={name}

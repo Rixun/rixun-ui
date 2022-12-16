@@ -18,7 +18,7 @@ export const GroupButton = (props) => {
   return (
     <>
       {modern ? (
-        <label className="rixun-gb-container">
+        <label className="rx-gb-container">
           {placeholder}
           <input
             className={className}
@@ -30,12 +30,12 @@ export const GroupButton = (props) => {
             onChange={onChange}
             {...extraProps}
           />
-          <span className="rixun-custom-gb"></span>
+          <span className="rx-custom-gb"></span>
         </label>
       ) : (
         <>
           <input
-            className={`rixun-gb ${className}`}
+            className={`rx-gb ${className}`}
             ref={groupButtonRef}
             type="radio"
             id={id}

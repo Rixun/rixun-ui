@@ -20,7 +20,7 @@ export const Footer = (props) => {
   return (
     <>
       <footer
-        className={`rixun-footer rixun-content-positon-${position} ${className}`}
+        className={`rx-footer rx-content-positon-${position} ${className}`}
         id={id}
         name={name}
         ref={footerRef}
@@ -31,14 +31,14 @@ export const Footer = (props) => {
           return (
             <div
               key={colIndex}
-              className={`rixun-link-container rixun-link-container-${layout} ${linkContainerClassName}`}
+              className={`rx-link-container rx-link-container-${layout} ${linkContainerClassName}`}
             >
               {column.map((item, index) => {
                 return (
                   <a
                     href={item.to}
                     key={index}
-                    className={`rixun-link ${linkClassName}`}
+                    className={`rx-link ${linkClassName}`}
                   >
                     {item.linkName}
                   </a>

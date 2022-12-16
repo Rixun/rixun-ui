@@ -1,17 +1,17 @@
-.rixun-input-group {
+.rx-input-group {
   position: relative;
 }
 
-.rixun-input {
+.rx-input {
   display: inline-block;
   padding: 10px;
 }
 
-.rixun-input:focus {
+.rx-input:focus {
   background-color:#FFF;
 }
 
-.rixun-input-label {
+.rx-input-label {
   color: #999;
   position: absolute;
   pointer-events: none;
@@ -20,8 +20,8 @@
   transition: 0.2s;
 }
 
-.rixun-input:focus ~ .rixun-input-label,
-.rixun-input:valid ~ .rixun-input-label {
+.rx-input:focus ~ .rx-input-label,
+.rx-input:valid ~ .rx-input-label {
   top: -8px;
   font-size: small;
   background-color:#FFF;
