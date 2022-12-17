@@ -20,9 +20,9 @@ export const Input = (props) => {
   } = props;
 
   return (
-    <div className="rixun-input-group">
+    <div className="rx-input-group">
       <input
-        className={`rixun-input ${className}`}
+        className={`rx-input ${className}`}
         ref={rixunRef}
         id={id}
         name={name}
@@ -35,10 +35,7 @@ export const Input = (props) => {
         required
         {...extraProps}
       />
-      <label
-        htmlFor={id}
-        className={`rixun-input-label ${placeholderClassName}`}
-      >
+      <label htmlFor={id} className={`rx-input-label ${placeholderClassName}`}>
         {placeholder}
       </label>
     </div>

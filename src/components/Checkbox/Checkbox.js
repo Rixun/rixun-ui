@@ -26,11 +26,11 @@ export const Checkbox = (props) => {
   } = props;
   return (
     <div
-      className={`rixun-checkbox-container ${containerClassName}`}
+      className={`rx-checkbox-container ${containerClassName}`}
       {...containerExtraProps}
     >
       <input
-        className={`rixun-checkbox rixun-checkbox-${corners} ${className}`}
+        className={`rx-checkbox rx-checkbox-${corners} ${className}`}
         id={id}
         name={name}
         type="checkbox"
@@ -44,15 +44,15 @@ export const Checkbox = (props) => {
       />
       <svg
         viewBox="0 0 100 100"
-        className={`rixun-checkbox-tick ${tickClassName} ${
-          animated ? 'rixun-checkbox-tick-animated' : ''
+        className={`rx-checkbox-tick ${tickClassName} ${
+          animated ? 'rx-checkbox-tick-animated' : ''
         }`}
         {...tickExtraProps}
       >
         <polyline points="20,60 40,75 80,30" />
       </svg>
       <label
-        className={`rixun-checkbox-label ${labelClassName}`}
+        className={`rx-checkbox-label ${labelClassName}`}
         htmlFor={id}
         {...labelExtraProps}
       >

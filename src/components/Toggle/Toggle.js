@@ -23,8 +23,8 @@ export const Toggle = (props) => {
 
   return (
     <div
-      className={`rixun-toggle-container ${
-        active ? 'rixun-toggle-active' : ''
+      className={`rx-toggle-container ${
+        active ? 'rx-toggle-active' : ''
       } ${containerClassName}`}
       onClick={disabled ? null : onClick}
       id={id ? id : null}
@@ -32,14 +32,14 @@ export const Toggle = (props) => {
     >
       <input type="checkbox" disabled={disabled} {...checkboxExtraProps} />
       <div
-        className={`rixun-toggle rixun-toggle-${type} rixun-toggle-${corners} ${
-          disabled ? 'rixun-toggle-disabled' : ''
+        className={`rx-toggle rx-toggle-${type} rx-toggle-${corners} ${
+          disabled ? 'rx-toggle-disabled' : ''
         } ${className}`}
         {...extraProps}
         style={style ?? null}
       >
         <span
-          className={`rixun-toggle-switch rixun-toggle-${corners} ${switchClassName}`}
+          className={`rx-toggle-switch rx-toggle-${corners} ${switchClassName}`}
           {...switchExtraProps}
         />
       </div>

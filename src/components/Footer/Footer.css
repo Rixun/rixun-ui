@@ -1,33 +1,33 @@
-.rixun-footer {
+.rx-footer {
   min-height: 15vh;  
   display: flex;
   align-items: center;
 }
 
-.rixun-content-positon-left {
+.rx-content-positon-left {
   justify-content: left;
 }
-.rixun-content-positon-center {
+.rx-content-positon-center {
   justify-content: center;
 }
-.rixun-content-positon-right {
+.rx-content-positon-right {
   justify-content: right;
 }
 
-.rixun-link-container {
+.rx-link-container {
   display: flex;
   margin: 5px;
   padding: 5px;  
 }
 
-.rixun-link-container-column {
+.rx-link-container-column {
   flex-direction: column;
 }
-.rixun-link-container-row {
+.rx-link-container-row {
   flex-direction: row;
 }
 
-.rixun-link {
+.rx-link {
   text-decoration: none;
   color: var(--text-black);
   margin: 0.5rem;

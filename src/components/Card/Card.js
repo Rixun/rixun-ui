@@ -8,7 +8,7 @@ export const Card = (props) => {
   return (
     <div
       id={id}
-      className={`rixun-card-${type} rixun-card-${corners} ${className} `}
+      className={`rx-card-${type} rx-card-${corners} ${className} `}
       onClick={onClick}
       style={style}
       {...extraProps}
