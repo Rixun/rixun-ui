@@ -1,75 +1,103 @@
-.rixun-button-default,
-.rixun-button-link,
-.rixun-button-outline {
+.rx-button-default,
+.rx-button-link,
+.rx-button-outline {
   font-size: 14px;
-  border: none;
+  line-height: 16px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid transparent;
   cursor: pointer;
   padding: 0.9em 2em;
   transition: 0.2s ease-in-out;
+  vertical-align: middle;
 }
-.rixun-button-default:disabled,
-.rixun-button-link:disabled,
-.rixun-button-outline:disabled {
+.rx-button-link {
+  border: none;
+}
+.rx-button-default:disabled,
+.rx-button-link:disabled,
+.rx-button-outline:disabled {
   cursor: default;
 }
 
-.rixun-button-default {
+.rx-button-default {
   background-color: var(--primary);
   color: var(--text);
 }
-.rixun-button-default:hover {
+.rx-button-default:hover {
   background-color: var(--primary-hover);
 }
-.rixun-button-default:active {
+.rx-button-default:active {
   background-color: var(--primary-active);
 }
-.rixun-button-default:disabled {
+.rx-button-default:disabled {
   background-color: var(--disabled-background);
   color: var(--disabled-text);
 }
 
-.rixun-button-link {
+.rx-button-link {
   background: none;
   text-decoration: underline;
   color: var(--primary);
 }
-.rixun-button-link:hover {
+.rx-button-link:hover {
   color: var(--primary-hover);
 }
-.rixun-button-link:active {
+.rx-button-link:active {
   color: var(--primary-active);
 }
-.rixun-button-link:disabled {
+.rx-button-link:disabled {
   color: var(--disabled-text);
 }
 
-.rixun-button-outline {
+.rx-button-outline {
   border: 1px solid var(--primary);
   color: var(--primary);
   background: transparent;
 }
-.rixun-button-outline:hover {
+.rx-button-outline:hover {
   border-color: var(--primary-hover);
   background-color: var(--primary-hover);
   color: var(--text);
 }
-.rixun-button-outline:active {
+.rx-button-outline:active {
   border-color: var(--primary-active);
   background-color: var(--primary-active);
   color: var(--text);
 }
-.rixun-button-outline:disabled {
+.rx-button-outline:disabled {
   border-color: var(--disabled-background);
   background: transparent;
   color: var(--disabled-text);
 }
 
-.rixun-button-round {
+.rx-button-round {
   border-radius: 0.3em;
 }
-.rixun-button-square {
+.rx-button-square {
   border-radius: none;
 }
-.rixun-button-circle {
+.rx-button-circle {
   border-radius: 1000em;
+}
+
+.rx-button-icon-position-left {
+  flex-direction: row-reverse;
+}
+.rx-button-icon-left {
+  padding-right: 0.4em;
+}
+.rx-button-icon-right {
+  padding-left: 0.4em;
+}
+
+.rx-button-text {
+  display: flex;
+  align-items: center;
+}
+.rx-button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
