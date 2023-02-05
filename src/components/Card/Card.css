@@ -1,36 +1,38 @@
-.rx-card-border,
-.rx-card-shadow,
-.rx-card-empty {
-  width: 300px;
-  height: 300px;
-}
+@layer Rixun {
+  .rx-card-border,
+  .rx-card-shadow,
+  .rx-card-empty {
+    width: 300px;
+    height: 300px;
+  }
 
-.rx-card-border {
-  border: 1px solid var(--border);
-}
-.rx-card-border:hover {
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-}
+  .rx-card-border {
+    border: 1px solid var(--border);
+  }
+  .rx-card-border:hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
 
-.rx-card-shadow {
-  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.15);
-}
-.rx-card-shadow:hover {
-  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.15);
-}
+  .rx-card-shadow {
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.15);
+  }
+  .rx-card-shadow:hover {
+    box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.15);
+  }
 
-.rx-card-round {
-  border-radius: 0.3em;
-}
-.rx-card-mid-round {
-  border-radius: 0.5em;
-}
-.rx-card-very-round {
-  border-radius: 1em;
-}
-.rx-card-square {
-  border-radius: none;
-}
-.rx-card-circle {
-  border-radius: 1000em;
+  .rx-card-round {
+    border-radius: 0.3em;
+  }
+  .rx-card-mid-round {
+    border-radius: 0.5em;
+  }
+  .rx-card-very-round {
+    border-radius: 1em;
+  }
+  .rx-card-square {
+    border-radius: none;
+  }
+  .rx-card-circle {
+    border-radius: 1000em;
+  }
 }

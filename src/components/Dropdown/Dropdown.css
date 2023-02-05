@@ -1,61 +1,63 @@
-.rx-dropdown {
-  height: 2rem;
-  width: 10rem;
-}
+@layer Rixun {
+  .rx-dropdown {
+    height: 2rem;
+    width: 10rem;
+  }
 
-.rx-dropdown-round {
-  border-radius: 0.3em;
-}
-.rx-dropdown-square {
-  border-radius: none;
-}
+  .rx-dropdown-round {
+    border-radius: 0.3em;
+  }
+  .rx-dropdown-square {
+    border-radius: none;
+  }
 
-.rx-dropdown-content-round {
-  border-radius: 0.3em;
-}
-.rx-dropdown-content-square {
-  border-radius: none;
-}
+  .rx-dropdown-content-round {
+    border-radius: 0.3em;
+  }
+  .rx-dropdown-content-square {
+    border-radius: none;
+  }
 
-.rx-dropdown-button {
-  position: relative;
-  display: inline-block;
-  /* width: 200px; */
-  width: 10rem;
-}
+  .rx-dropdown-button {
+    position: relative;
+    display: inline-block;
+    /* width: 200px; */
+    width: 10rem;
+  }
 
-.rx-dropbutton {
-  background-color: var(--primary);
-  color: var(--text-white);
-  padding: 1rem;
-  font-size: 1rem;
-  border: none;
-  width: inherit;
-}
+  .rx-dropbutton {
+    background-color: var(--primary);
+    color: var(--text-white);
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    width: inherit;
+  }
 
-.rx-dropdown-content {
-  background-color: var(--highlight25);
-  position: absolute;
-  display: none;
-  z-index: 1;
-  width: inherit;
-}
+  .rx-dropdown-content {
+    background-color: var(--highlight25);
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: inherit;
+  }
 
-.rx-dropdown-content a {
-  color: var(--text-black);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+  .rx-dropdown-content a {
+    color: var(--text-black);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
-.rx-dropdown-content a:hover {
-  background-color: var(--secondary-hover);
-}
+  .rx-dropdown-content a:hover {
+    background-color: var(--secondary-hover);
+  }
 
-.rx-dropdown-button:hover .rx-dropdown-content {
-  display: block;
-}
+  .rx-dropdown-button:hover .rx-dropdown-content {
+    display: block;
+  }
 
-.dropdown:hover .rx-dropbutton {
-  background-color: var(--primary-hover);
+  .dropdown:hover .rx-dropbutton {
+    background-color: var(--primary-hover);
+  }
 }
