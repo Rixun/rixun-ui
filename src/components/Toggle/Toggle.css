@@ -1,98 +1,100 @@
-.rx-toggle-container {
-  width: 40px;
-  height: 20px;
-  position: relative;
-  cursor: pointer;
-}
+@layer Rixun {
+  .rx-toggle-container {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
 
-.rx-toggle-container input {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  position: absolute;
-}
+  .rx-toggle-container input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+  }
 
-.rx-toggle {
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--inactive-background);
-  background-color: var(--inactive-background);
-  background-clip: padding-box;
-  transition: 0.2s ease-in-out;
-  position: relative;
-}
-.rx-toggle:hover {
-  background-color: var(--primary);
-}
-.rx-toggle-border:hover {
-  border-color: var(--primary);
-}
-.rx-toggle-active .rx-toggle-border {
-  border-color: var(--primary);
-}
-.rx-toggle-active .rx-toggle {
-  background-color: var(--primary);
-}
-.rx-toggle-container input:focus + .rx-toggle {
-  outline: 1px solid var(--text-black);
-}
-.rx-toggle-no-border {
-  border: 1px solid transparent;
-}
-.rx-toggle-disabled,
-.rx-toggle-disabled:hover {
-  border-color: var(--lightgrey);
-  background-color: var(--lightgrey);
-  cursor: not-allowed;
-}
+  .rx-toggle {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--inactive-background);
+    background-color: var(--inactive-background);
+    background-clip: padding-box;
+    transition: 0.2s ease-in-out;
+    position: relative;
+  }
+  .rx-toggle:hover {
+    background-color: var(--primary);
+  }
+  .rx-toggle-border:hover {
+    border-color: var(--primary);
+  }
+  .rx-toggle-active .rx-toggle-border {
+    border-color: var(--primary);
+  }
+  .rx-toggle-active .rx-toggle {
+    background-color: var(--primary);
+  }
+  .rx-toggle-container input:focus + .rx-toggle {
+    outline: 1px solid var(--text-black);
+  }
+  .rx-toggle-no-border {
+    border: 1px solid transparent;
+  }
+  .rx-toggle-disabled,
+  .rx-toggle-disabled:hover {
+    border-color: var(--lightgrey);
+    background-color: var(--lightgrey);
+    cursor: not-allowed;
+  }
 
-.rx-toggle-switch {
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: var(--text-white);
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1);
-  transition: left 0.2s ease-in-out;
-}
-.rx-toggle-switch::before {
-  content: '';
-  position: absolute;
-  border-radius: inherit;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  box-shadow: -1px 0.75px 1px -0.5px rgba(0, 0, 0, 0.25);
-}
-.rx-toggle-switch::after {
-  content: '';
-  position: absolute;
-  border-radius: inherit;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  box-shadow: 1px 0.75px 1px -0.5px rgba(0, 0, 0, 0.25);
-}
-.rx-toggle-no-border .rx-toggle-switch {
-  left: -1px;
-  top: -0.5px;
-  width: 52%;
-  height: 103%;
-}
+  .rx-toggle-switch {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--text-white);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1);
+    transition: left 0.2s ease-in-out;
+  }
+  .rx-toggle-switch::before {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    box-shadow: -1px 0.75px 1px -0.5px rgba(0, 0, 0, 0.25);
+  }
+  .rx-toggle-switch::after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    box-shadow: 1px 0.75px 1px -0.5px rgba(0, 0, 0, 0.25);
+  }
+  .rx-toggle-no-border .rx-toggle-switch {
+    left: -1px;
+    top: -0.5px;
+    width: 52%;
+    height: 103%;
+  }
 
-.rx-toggle-active .rx-toggle-switch {
-  left: 50%;
-}
-.rx-toggle-active .rx-toggle-no-border .rx-toggle-switch {
-  left: 51%;
-}
+  .rx-toggle-active .rx-toggle-switch {
+    left: 50%;
+  }
+  .rx-toggle-active .rx-toggle-no-border .rx-toggle-switch {
+    left: 51%;
+  }
 
-.rx-toggle-round {
-  border-radius: 0.3em;
-}
-.rx-toggle-square {
-  border-radius: none;
-}
-.rx-toggle-circle {
-  border-radius: 1000em;
+  .rx-toggle-round {
+    border-radius: 0.3em;
+  }
+  .rx-toggle-square {
+    border-radius: none;
+  }
+  .rx-toggle-circle {
+    border-radius: 1000em;
+  }
 }

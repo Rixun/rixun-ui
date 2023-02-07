@@ -1,103 +1,105 @@
-.rx-button-default,
-.rx-button-link,
-.rx-button-outline {
-  font-size: 14px;
-  line-height: 16px;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid transparent;
-  cursor: pointer;
-  padding: 0.9em 2em;
-  transition: 0.2s ease-in-out;
-  vertical-align: middle;
-}
-.rx-button-link {
-  border: none;
-}
-.rx-button-default:disabled,
-.rx-button-link:disabled,
-.rx-button-outline:disabled {
-  cursor: default;
-}
+@layer Rixun {
+  .rx-button-default,
+  .rx-button-link,
+  .rx-button-outline {
+    font-size: 14px;
+    line-height: 16px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 0.9em 2em;
+    transition: 0.2s ease-in-out;
+    vertical-align: middle;
+  }
+  .rx-button-link {
+    border: none;
+  }
+  .rx-button-default:disabled,
+  .rx-button-link:disabled,
+  .rx-button-outline:disabled {
+    cursor: default;
+  }
 
-.rx-button-default {
-  background-color: var(--primary);
-  color: var(--text);
-}
-.rx-button-default:hover {
-  background-color: var(--primary-hover);
-}
-.rx-button-default:active {
-  background-color: var(--primary-active);
-}
-.rx-button-default:disabled {
-  background-color: var(--disabled-background);
-  color: var(--disabled-text);
-}
+  .rx-button-default {
+    background-color: var(--primary);
+    color: var(--text);
+  }
+  .rx-button-default:hover {
+    background-color: var(--primary-hover);
+  }
+  .rx-button-default:active {
+    background-color: var(--primary-active);
+  }
+  .rx-button-default:disabled {
+    background-color: var(--disabled-background);
+    color: var(--disabled-text);
+  }
 
-.rx-button-link {
-  background: none;
-  text-decoration: underline;
-  color: var(--primary);
-}
-.rx-button-link:hover {
-  color: var(--primary-hover);
-}
-.rx-button-link:active {
-  color: var(--primary-active);
-}
-.rx-button-link:disabled {
-  color: var(--disabled-text);
-}
+  .rx-button-link {
+    background: none;
+    text-decoration: underline;
+    color: var(--primary);
+  }
+  .rx-button-link:hover {
+    color: var(--primary-hover);
+  }
+  .rx-button-link:active {
+    color: var(--primary-active);
+  }
+  .rx-button-link:disabled {
+    color: var(--disabled-text);
+  }
 
-.rx-button-outline {
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  background: transparent;
-}
-.rx-button-outline:hover {
-  border-color: var(--primary-hover);
-  background-color: var(--primary-hover);
-  color: var(--text);
-}
-.rx-button-outline:active {
-  border-color: var(--primary-active);
-  background-color: var(--primary-active);
-  color: var(--text);
-}
-.rx-button-outline:disabled {
-  border-color: var(--disabled-background);
-  background: transparent;
-  color: var(--disabled-text);
-}
+  .rx-button-outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+  }
+  .rx-button-outline:hover {
+    border-color: var(--primary-hover);
+    background-color: var(--primary-hover);
+    color: var(--text);
+  }
+  .rx-button-outline:active {
+    border-color: var(--primary-active);
+    background-color: var(--primary-active);
+    color: var(--text);
+  }
+  .rx-button-outline:disabled {
+    border-color: var(--disabled-background);
+    background: transparent;
+    color: var(--disabled-text);
+  }
 
-.rx-button-round {
-  border-radius: 0.3em;
-}
-.rx-button-square {
-  border-radius: none;
-}
-.rx-button-circle {
-  border-radius: 1000em;
-}
+  .rx-button-round {
+    border-radius: 0.3em;
+  }
+  .rx-button-square {
+    border-radius: 0;
+  }
+  .rx-button-circle {
+    border-radius: 1000em;
+  }
 
-.rx-button-icon-position-left {
-  flex-direction: row-reverse;
-}
-.rx-button-icon-left {
-  padding-right: 0.4em;
-}
-.rx-button-icon-right {
-  padding-left: 0.4em;
-}
+  .rx-button-icon-position-left {
+    flex-direction: row-reverse;
+  }
+  .rx-button-icon-left {
+    padding-right: 0.4em;
+  }
+  .rx-button-icon-right {
+    padding-left: 0.4em;
+  }
 
-.rx-button-text {
-  display: flex;
-  align-items: center;
-}
-.rx-button-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .rx-button-text {
+    display: flex;
+    align-items: center;
+  }
+  .rx-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

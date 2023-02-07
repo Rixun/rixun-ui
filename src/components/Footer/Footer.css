@@ -1,34 +1,36 @@
-.rx-footer {
-  min-height: 15vh;  
-  display: flex;
-  align-items: center;
-}
+@layer Rixun {
+  .rx-footer {
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+  }
 
-.rx-content-positon-left {
-  justify-content: left;
-}
-.rx-content-positon-center {
-  justify-content: center;
-}
-.rx-content-positon-right {
-  justify-content: right;
-}
+  .rx-content-positon-left {
+    justify-content: left;
+  }
+  .rx-content-positon-center {
+    justify-content: center;
+  }
+  .rx-content-positon-right {
+    justify-content: right;
+  }
 
-.rx-link-container {
-  display: flex;
-  margin: 5px;
-  padding: 5px;  
-}
+  .rx-link-container {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+  }
 
-.rx-link-container-column {
-  flex-direction: column;
-}
-.rx-link-container-row {
-  flex-direction: row;
-}
+  .rx-link-container-column {
+    flex-direction: column;
+  }
+  .rx-link-container-row {
+    flex-direction: row;
+  }
 
-.rx-link {
-  text-decoration: none;
-  color: var(--text-black);
-  margin: 0.5rem;
+  .rx-link {
+    text-decoration: none;
+    color: var(--text-black);
+    margin: 0.5rem;
+  }
 }
