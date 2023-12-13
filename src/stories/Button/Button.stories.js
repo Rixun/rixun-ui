@@ -146,7 +146,7 @@ stories.add('Button Types With icons only', () => {
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
     </>
-  )
+  );
 });
 stories.add('ClassName Button', () => {
   return (
