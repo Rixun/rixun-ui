@@ -1,5 +1,4 @@
-//import { storiesOf } from '@storybook/react';
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import { storiesOf } from '@storybook/react';
 import { useRef, useState } from 'react';
 import { Button } from '../../components/Button';
 import './Button.css';
@@ -147,7 +146,7 @@ stories.add('Button Types With icons only', () => {
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
     </>
-  )
+  );
 });
 stories.add('ClassName Button', () => {
   return (
