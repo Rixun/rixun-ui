@@ -1,4 +1,5 @@
-import { storiesOf } from '@storybook/react';
+//import { storiesOf } from '@storybook/react';
+import type { StorybookConfig } from '@storybook/react-webpack5';
 import { useRef, useState } from 'react';
 import { Button } from '../../components/Button';
 import './Button.css';
