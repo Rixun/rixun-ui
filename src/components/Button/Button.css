@@ -102,4 +102,8 @@
     align-items: center;
     justify-content: center;
   }
+
+  .map-of-buttons {
+    margin-right: 5px;
+  }
 }
