@@ -9,7 +9,7 @@ import './Button.css';
 
 const stories = storiesOf('Button', module);
 
-stories.add('Button Types', () => {
+stories.add('Button Displays', () => {
   return (
     <>
       <Button name="Default" />
