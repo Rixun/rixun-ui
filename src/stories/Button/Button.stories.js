@@ -190,9 +190,19 @@ stories.add('Disabled Button', () => {
       <hr />
       <Button name="Disabled" disabled={true} display="outline" />
       <span style={{ margin: '5px' }} />
-      <Button name="Disabled" disabled={true} display="outline" corners="circle" />
+      <Button
+        name="Disabled"
+        disabled={true}
+        display="outline"
+        corners="circle"
+      />
       <span style={{ margin: '5px' }} />
-      <Button name="Disabled" disabled={true} display="outline" corners="square" />
+      <Button
+        name="Disabled"
+        disabled={true}
+        display="outline"
+        corners="square"
+      />
       <hr />
       <Button name="Disabled" disabled={true} display="link" />
     </>
@@ -219,7 +229,7 @@ stories.add('State change Button', () => {
 stories.add('Map of Buttons', () => {
   const test = [1, 2, 3];
   return test.map((n) => (
-    <Button name={`${n}`} key={n} className="map-of-buttons" />
+    <Button name={`${n}`} key={n} style={{ marginRight: '5px' }} />
   ));
 });
 stories.add('Ref Button', () => {
