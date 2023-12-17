@@ -9,14 +9,16 @@ import './Button.css';
 
 const stories = storiesOf('Button', module);
 
-stories.add('Button Types', () => {
+stories.add('Button Displays', () => {
   return (
     <>
       <Button name="Default" />
       <hr />
-      <Button name="Outline" type="outline" />
+      <Button name="Submit" type="submit" display="default" />
       <hr />
-      <Button name="Link" type="link" />
+      <Button name="Outline" display="outline" />
+      <hr />
+      <Button name="Link" display="link" />
     </>
   );
 });
@@ -25,15 +27,15 @@ stories.add('Button Corner Types', () => {
     <>
       <Button name="Default" />
       <span style={{ margin: '5px' }} />
-      <Button name="Default" type="outline" />
+      <Button name="Default" display="outline" />
       <hr />
       <Button name="Circle" corners="circle" />
       <span style={{ margin: '5px' }} />
-      <Button name="Circle" corners="circle" type="outline" />
+      <Button name="Circle" corners="circle" display="outline" />
       <hr />
       <Button name="Square" corners="square" />
       <span style={{ margin: '5px' }} />
-      <Button name="Square" corners="square" type="outline" />
+      <Button name="Square" corners="square" display="outline" />
     </>
   );
 });
@@ -51,7 +53,7 @@ stories.add('Button Types With Icons', () => {
       <span style={{ margin: '5px' }} />
       <Button
         name="Default"
-        type="outline"
+        display="outline"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
       <hr />
@@ -65,7 +67,7 @@ stories.add('Button Types With Icons', () => {
       <Button
         name="Circle"
         corners="circle"
-        type="outline"
+        display="outline"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
       <hr />
@@ -79,20 +81,20 @@ stories.add('Button Types With Icons', () => {
       <Button
         name="Square"
         corners="square"
-        type="outline"
+        display="outline"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
       <hr />
       <Button
         name="Link"
-        type="link"
+        display="link"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
         iconPosition="left"
       />
       <span style={{ margin: '5px' }} />
       <Button
         name="Link"
-        type="link"
+        display="link"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
     </>
@@ -107,7 +109,7 @@ stories.add('Button Types With icons only', () => {
       />
       <span style={{ margin: '5px' }} />
       <Button
-        type="outline"
+        display="outline"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
       <hr />
@@ -119,7 +121,7 @@ stories.add('Button Types With icons only', () => {
       <span style={{ margin: '5px' }} />
       <Button
         corners="circle"
-        type="outline"
+        display="outline"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
       <hr />
@@ -131,18 +133,18 @@ stories.add('Button Types With icons only', () => {
       <span style={{ margin: '5px' }} />
       <Button
         corners="square"
-        type="outline"
+        display="outline"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
       <hr />
       <Button
-        type="link"
+        display="link"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
         iconPosition="left"
       />
       <span style={{ margin: '5px' }} />
       <Button
-        type="link"
+        display="link"
         // icon={<FontAwesomeIcon icon={faCoffee} />}
       />
     </>
@@ -157,23 +159,23 @@ stories.add('ClassName Button', () => {
       <span style={{ margin: '5px' }} />
       <Button name="Red Default" className="red-default" corners="square" />
       <hr />
-      <Button name="Red Outline" className="red-outline" type="outline" />
+      <Button name="Red Outline" className="red-outline" display="outline" />
       <span style={{ margin: '5px' }} />
       <Button
         name="Red Outline"
         className="red-outline"
-        type="outline"
+        display="outline"
         corners="circle"
       />
       <span style={{ margin: '5px' }} />
       <Button
         name="Red Outline"
         className="red-outline"
-        type="outline"
+        display="outline"
         corners="square"
       />
       <hr />
-      <Button name="Red Link" className="red-link" type="link" />
+      <Button name="Red Link" className="red-link" display="link" />
     </>
   );
 });
@@ -186,13 +188,23 @@ stories.add('Disabled Button', () => {
       <span style={{ margin: '5px' }} />
       <Button name="Disabled" disabled={true} corners="square" />
       <hr />
-      <Button name="Disabled" disabled={true} type="outline" />
+      <Button name="Disabled" disabled={true} display="outline" />
       <span style={{ margin: '5px' }} />
-      <Button name="Disabled" disabled={true} type="outline" corners="circle" />
+      <Button
+        name="Disabled"
+        disabled={true}
+        display="outline"
+        corners="circle"
+      />
       <span style={{ margin: '5px' }} />
-      <Button name="Disabled" disabled={true} type="outline" corners="square" />
+      <Button
+        name="Disabled"
+        disabled={true}
+        display="outline"
+        corners="square"
+      />
       <hr />
-      <Button name="Disabled" disabled={true} type="link" />
+      <Button name="Disabled" disabled={true} display="link" />
     </>
   );
 });
