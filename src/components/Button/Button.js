@@ -11,6 +11,7 @@ export const Button = (props) => {
     onClick,
     corners,
     disabled,
+    display,
     style,
     type,
     value,
@@ -22,12 +23,14 @@ export const Button = (props) => {
   return (
     <>
       <button
-        className={`rx-button-${style} rx-button-${corners} rx-button-icon-position-${iconPosition} ${className}`}
+        className={`rx-button-${display} rx-button-${corners} rx-button-icon-position-${iconPosition} ${className}`}
         id={id}
         ref={buttonRef}
         onClick={onClick}
+        style={style}
+        display={display}
         type={type}
-        value={value}
+        value={value}        
         disabled={disabled}
         {...extraProps}
       >
@@ -45,7 +48,7 @@ export const Button = (props) => {
 Button.defaultProps = {
   corners: 'round',
   className: '',
-  style: 'default',
+  display: 'default',
   iconPosition: 'right',
 };
 
@@ -57,7 +60,7 @@ Button.propTypes = {
   name: PropTypes.string,
   corners: PropTypes.oneOf(['square', 'round', 'circle']),
   disabled: PropTypes.bool,
-  style: PropTypes.string,
+  style: PropTypes.object,
   type: PropTypes.oneOf(['default', 'link', 'outline']),
   value: PropTypes.object,
   icon: PropTypes.object,
