@@ -5,7 +5,16 @@
 
   .rx-input {
     display: inline-block;
-    padding: 10px;
+  }
+
+  .rx-input-small {
+    padding: 4px;
+  }
+  .rx-input-medium {
+    padding: 8px;
+  }
+  .rx-input-large {
+    padding: 12px;
   }
 
   .rx-input:focus {
@@ -16,16 +25,18 @@
     color: #999;
     position: absolute;
     pointer-events: none;
-    left: 10px;
-    top: 10px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     transition: 0.2s;
   }
 
   .rx-input:focus ~ .rx-input-label,
   .rx-input:valid ~ .rx-input-label {
     top: -8px;
+    transform: translateY(0);
     font-size: small;
     background-color: #fff;
-    padding: 0 5px;
+    padding: 0 4px;
   }
 }

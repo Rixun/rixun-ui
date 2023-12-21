@@ -8,6 +8,7 @@ export const Input = (props) => {
     rixunRef,
     id,
     name,
+    size,
     type,
     value,
     onClick,
@@ -23,7 +24,7 @@ export const Input = (props) => {
   return (
     <div className="rx-input-group">
       <input
-        className={`rx-input ${className}`}
+        className={`rx-input rx-input-${size} ${className}`}
         ref={rixunRef}
         id={id}
         name={name}
@@ -46,6 +47,7 @@ export const Input = (props) => {
 
 Input.defaultProps = {
   name: 'rixun-input',
+  size: 'medium',
   type: 'text',
 };
 
@@ -54,6 +56,7 @@ Input.propTypes = {
   rixunRef: PropTypes.object,
   id: PropTypes.string,
   name: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.string,
   value: PropTypes.string,
   onClick: PropTypes.func,
