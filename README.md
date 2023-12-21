@@ -23,7 +23,10 @@ import { Button } from 'rixun-ui';
 
 function MyFunction() {
   return (
-    <Button>Rixun UI!</Button> 
+    <Button
+      name='Rixun UI!
+      type='default'
+    />
   );
 }
 ```
