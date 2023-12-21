@@ -9,6 +9,7 @@ export const Input = (props) => {
     id,
     name,
     type,
+    value,
     onClick,
     onFocus,
     onChange,
@@ -27,6 +28,7 @@ export const Input = (props) => {
         id={id}
         name={name}
         type={type}
+        value={value}
         onClick={onClick}
         onFocus={onFocus}
         onChange={onChange}
@@ -53,6 +55,7 @@ Input.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,
+  value: PropTypes.string,
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
   onChange: PropTypes.func,
