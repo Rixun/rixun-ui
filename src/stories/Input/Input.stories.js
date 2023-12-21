@@ -81,3 +81,21 @@ stories.add('onBlur capitals', () => {
     </>
   );
 });
+
+stories.add('Input Sizes', () => {
+  const sizes = ['small', 'medium', 'large'];
+
+  return sizes.map((size) => (
+    <>
+      <Input
+        className="rixun-input storybook-input"
+        id="rixun-input1"
+        name="rixun-input"
+        size={size}
+        type="text"
+        placeholder={size}
+      />
+      <br />
+    </>
+  ));
+});
