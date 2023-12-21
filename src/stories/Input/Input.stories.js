@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React, { createRef, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { Input } from '../../components/Input';
 import './Input.css';
@@ -6,6 +6,7 @@ import './Input.css';
 const stories = storiesOf('Input', module);
 
 stories.add('Basic Events', () => {
+  const [value, setValue] = useState('');
   const ref = createRef();
 
   const handleOnClick = () => {
@@ -14,8 +15,9 @@ stories.add('Basic Events', () => {
   const handleOnFocus = () => {
     console.log('handle onFocus');
   };
-  const handleOnChange = () => {
+  const handleOnChange = (e) => {
     console.log('handle onChange');
+    setValue(e.target.value);
   };
   const handleOnBlur = () => {
     console.log('handle onBlur');
@@ -32,6 +34,7 @@ stories.add('Basic Events', () => {
         id="rixun-input1"
         name="rixun-input"
         type="text"
+        value={value}
         placeholder="First Name"
         onClick={handleOnClick}
         onFocus={handleOnFocus}
@@ -46,6 +49,7 @@ stories.add('Basic Events', () => {
         id="rixun-input2"
         name="rixun-input"
         type="text"
+        value={value}
         placeholder="Overriding placeholder font size"
         placeholderClassName="placeholderStyling"
         onClick={handleOnClick}
