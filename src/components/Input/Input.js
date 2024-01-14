@@ -1,48 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Input.css';
+import { PlaceholderLabelInput } from './LabelPlaceholder/Input';
+import { OnlyInput } from './OnlyInput/Input';
+
+const PlaceholderLabel = 'PlaceholderLabel';
 
 export const Input = (props) => {
-  const {
-    className,
-    rixunRef,
-    id,
-    name,
-    size,
-    type,
-    value,
-    onClick,
-    onFocus,
-    onChange,
-    onBlur,
-    onPaste,
-    placeholder,
-    placeholderClassName,
-    extraProps,
-  } = props;
+  const { layout } = props;
 
-  return (
-    <div className="rx-input-group">
-      <input
-        className={`rx-input rx-input-${size} ${className}`}
-        ref={rixunRef}
-        id={id}
-        name={name}
-        type={type}
-        value={value}
-        onClick={onClick}
-        onFocus={onFocus}
-        onChange={onChange}
-        onBlur={onBlur}
-        onPaste={onPaste}
-        required
-        {...extraProps}
-      />
-      <label htmlFor={id} className={`rx-input-label ${placeholderClassName}`}>
-        {placeholder}
-      </label>
-    </div>
-  );
+  if (layout === PlaceholderLabel) {
+    return <PlaceholderLabelInput {...props} />;
+  } else if (layout === 'Horizontal') {
+    return null;
+  } else {
+    return <OnlyInput {...props} />;
+  }
 };
 
 Input.defaultProps = {
@@ -66,5 +38,6 @@ Input.propTypes = {
   onPaste: PropTypes.func,
   placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   placeholderClassName: PropTypes.string,
+  layout: PropTypes.string,
   extraProps: PropTypes.object,
 };

@@ -5,6 +5,8 @@ import './Input.css';
 
 const stories = storiesOf('Input', module);
 
+const PlaceholderLabel = 'PlaceholderLabel';
+
 stories.add('Basic Events', () => {
   const [value, setValue] = useState('');
   const ref = createRef();
@@ -41,6 +43,7 @@ stories.add('Basic Events', () => {
         onChange={handleOnChange}
         onBlur={handleOnBlur}
         onPaste={handleOnPaste}
+        layout={PlaceholderLabel}
       />
       <br />
       <Input
@@ -57,7 +60,10 @@ stories.add('Basic Events', () => {
         onChange={handleOnChange}
         onBlur={handleOnBlur}
         onPaste={handleOnPaste}
+        layout={PlaceholderLabel}
       />
+      <br />
+      <Input placeholder="Input Placeholder" />
     </>
   );
 });
@@ -77,6 +83,7 @@ stories.add('onBlur capitals', () => {
         type="text"
         placeholder="First Name"
         onBlur={handleOnBlur}
+        layout={PlaceholderLabel}
       />
     </>
   );
@@ -94,6 +101,7 @@ stories.add('Input Sizes', () => {
         size={size}
         type="text"
         placeholder={size}
+        layout={PlaceholderLabel}
       />
       <br />
     </>

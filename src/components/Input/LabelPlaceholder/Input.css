@@ -1,27 +1,27 @@
 @layer Rixun {
-  .rx-input-group {
+  .rx-label-placeholder-input-group {
     position: relative;
   }
 
-  .rx-input {
+  .rx-label-placeholder-input {
     display: inline-block;
   }
 
-  .rx-input-small {
+  .rx-label-placeholder-input-small {
     padding: 4px;
   }
-  .rx-input-medium {
+  .rx-label-placeholder-input-medium {
     padding: 8px;
   }
-  .rx-input-large {
+  .rx-label-placeholder-input-large {
     padding: 12px;
   }
 
-  .rx-input:focus {
+  .rx-label-placeholder-input:focus {
     background-color: #fff;
   }
 
-  .rx-input-label {
+  .rx-label-placeholder-input-label {
     color: #999;
     position: absolute;
     pointer-events: none;
@@ -31,8 +31,8 @@
     transition: 0.2s;
   }
 
-  .rx-input:focus ~ .rx-input-label,
-  .rx-input:valid ~ .rx-input-label {
+  .rx-label-placeholder-input:focus ~ .rx-label-placeholder-input-label,
+  .rx-label-placeholder-input:valid ~ .rx-label-placeholder-input-label {
     top: -8px;
     transform: translateY(0);
     font-size: small;
