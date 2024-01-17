@@ -1,0 +1,29 @@
+@layer Rixun {
+  .rx-horizontal-input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .rx-horizontal-input {
+    display: inline-block;
+  }
+
+  .rx-horizontal-input-small {
+    padding: 4px;
+  }
+  .rx-horizontal-input-medium {
+    padding: 8px;
+  }
+  .rx-horizontal-input-large {
+    padding: 12px;
+  }
+
+  .rx-horizontal-input:focus {
+    background-color: #fff;
+  }
+
+  .rx-horizontal-input-label {
+  }
+}

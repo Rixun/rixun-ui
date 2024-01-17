@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Input.css';
 
-export const PlaceholderLabelInput = (props) => {
+export const HorizontalInput = (props) => {
   const {
     className,
     rixunRef,
@@ -17,20 +17,29 @@ export const PlaceholderLabelInput = (props) => {
     onBlur,
     onPaste,
     placeholder,
-    placeholderClassName,
+    label,
+    labelClassName,
     containerClassName,
     extraProps,
   } = props;
 
   return (
-    <div className={`rx-label-placeholder-input-group ${containerClassName}`}>
+    // add className to the group here so it can be controlled too do it for the placeholder label too
+    <div className={`rx-horizontal-input-group ${containerClassName}`}>
+      <label
+        htmlFor={id}
+        className={`rx-horizontal-input-label ${labelClassName}}`}
+      >
+        {label}
+      </label>
       <input
-        className={`rx-label-placeholder-input rx-label-placeholder-input-${size} ${className}`}
+        className={`rx-horizontal-input rx-horizontal-input-${size} ${className}`}
         ref={rixunRef}
         id={id}
         name={name}
         type={type}
         value={value}
+        placeholder={placeholder}
         onClick={onClick}
         onFocus={onFocus}
         onChange={onChange}
@@ -39,23 +48,17 @@ export const PlaceholderLabelInput = (props) => {
         required
         {...extraProps}
       />
-      <label
-        htmlFor={id}
-        className={`rx-label-placeholder-input-label ${placeholderClassName}`}
-      >
-        {placeholder}
-      </label>
     </div>
   );
 };
 
-PlaceholderLabelInput.defaultProps = {
+HorizontalInput.defaultProps = {
   name: 'rixun-input',
   size: 'medium',
   type: 'text',
 };
 
-PlaceholderLabelInput.propTypes = {
+HorizontalInput.propTypes = {
   className: PropTypes.string,
   rixunRef: PropTypes.object,
   id: PropTypes.string,
@@ -69,8 +72,9 @@ PlaceholderLabelInput.propTypes = {
   onBlur: PropTypes.func,
   onPaste: PropTypes.func,
   placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  placeholderClassName: PropTypes.string,
-  layout: PropTypes.string,
+  label: PropTypes.string,
+  labelClassName: PropTypes.string,
   containerClassName: PropTypes.string,
+  layout: PropTypes.string,
   extraProps: PropTypes.object,
 };

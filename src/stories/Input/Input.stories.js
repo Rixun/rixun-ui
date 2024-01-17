@@ -7,6 +7,29 @@ const stories = storiesOf('Input', module);
 
 const PlaceholderLabel = 'PlaceholderLabel';
 
+stories.add('Layouts', () => {
+  return (
+    <div style={{ maxWidth: 500 }}>
+      <p>Horizontal Input</p>
+      <Input
+        layout="Horizontal"
+        placeholder="Placeholder"
+        label="This Input is dependent on maxWidth"
+      />
+      <br />
+      <p>Placeholder Label Input</p>
+      <Input layout="PlaceholderLabel" placeholder="Placeholder Label Input" />
+      <br />
+      <p>Only Input </p>
+      <Input
+        layout="Only"
+        placeholder="Input with no other features"
+        label="label"
+      />
+    </div>
+  );
+});
+
 stories.add('Basic Events', () => {
   const [value, setValue] = useState('');
   const ref = createRef();
@@ -62,8 +85,6 @@ stories.add('Basic Events', () => {
         onPaste={handleOnPaste}
         layout={PlaceholderLabel}
       />
-      <br />
-      <Input placeholder="Input Placeholder" />
     </>
   );
 });

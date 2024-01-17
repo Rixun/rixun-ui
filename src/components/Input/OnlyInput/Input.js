@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Input.css';
 
 export const OnlyInput = (props) => {
@@ -37,4 +38,29 @@ export const OnlyInput = (props) => {
       {...extraProps}
     />
   );
+};
+
+OnlyInput.defaultProps = {
+  name: 'rixun-input',
+  size: 'medium',
+  type: 'text',
+};
+
+OnlyInput.propTypes = {
+  className: PropTypes.string,
+  rixunRef: PropTypes.object,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  type: PropTypes.string,
+  value: PropTypes.string,
+  onClick: PropTypes.func,
+  onFocus: PropTypes.func,
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  onPaste: PropTypes.func,
+  placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  placeholderClassName: PropTypes.string,
+  layout: PropTypes.string,
+  extraProps: PropTypes.object,
 };
